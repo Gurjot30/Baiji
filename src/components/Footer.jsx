@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-top grid">
           
           <div className="footer-about">
-            <h2 className="logo">BAIJI<span className="text-accent">.</span></h2>
+            <img src="/logo.png" alt="Baiji Entertainments Logo" className="footer-logo" />
             <p>
               A premium full-service creative advertising and entertainment agency based in Delhi & Mumbai. We build brands that matter.
             </p>

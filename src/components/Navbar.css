@@ -24,14 +24,17 @@
   height: 100%;
 }
 
-.logo h2 {
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.nav-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  mix-blend-mode: screen;
+  filter: contrast(1.1);
 }
 
-.logo span {
-  color: var(--accent-color);
+.logo:hover .nav-logo {
+  transform: scale(1.05);
 }
 
 .nav-links {

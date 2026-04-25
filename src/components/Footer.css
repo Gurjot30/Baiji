@@ -10,10 +10,13 @@
   margin-bottom: 4rem;
 }
 
-.footer-about .logo {
-  font-family: 'Outfit', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.footer-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  mix-blend-mode: screen;
+  filter: contrast(1.1);
 }
 
 .footer-about p {
