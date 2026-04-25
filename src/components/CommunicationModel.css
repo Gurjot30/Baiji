@@ -1,0 +1,66 @@
+.c-model-section {
+  background-color: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.c-model-section .subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.model-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.model-circle {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(5px);
+}
+
+.model-circle:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 30px rgba(224, 176, 107, 0.15);
+  transform: translateY(-10px);
+  z-index: 10;
+}
+
+.circle-content h3 {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.circle-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Interlocking effect on desktop */
+@media (min-width: 900px) {
+  .model-container {
+    gap: -20px;
+  }
+  .model-circle:nth-child(2) {
+    margin: 0 -40px;
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,39 @@
+.clients-section {
+  background: var(--gradient-dark);
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.client-logo {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.client-logo span {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+}
+
+.client-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+}

@@ -1,0 +1,27 @@
+.cta-section {
+  position: relative;
+  background: var(--bg-color);
+  padding: 80px 5%;
+}
+
+.cta-content {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, rgba(25, 25, 25, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+}
+
+.cta-section .heading-lg {
+  margin-bottom: 1.5rem;
+}
+
+.cta-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.cta-btn {
+  font-size: 1.1rem;
+  padding: 18px 40px;
+}
