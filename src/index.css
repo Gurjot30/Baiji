@@ -9,7 +9,7 @@
   --card-bg: rgba(25, 25, 25, 0.6);
   --border-color: rgba(255, 255, 255, 0.1);
   --gradient-dark: linear-gradient(180deg, #050505 0%, #111111 100%);
-  --nav-height: 80px;
+  --nav-height: 150px;
 }
 
 * {

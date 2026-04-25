@@ -11,12 +11,10 @@
 }
 
 .footer-logo {
-  height: 80px;
+  height: 180px;
   width: auto;
   object-fit: contain;
   margin-bottom: 1.5rem;
-  mix-blend-mode: screen;
-  filter: contrast(1.1);
 }
 
 .footer-about p {
