@@ -8,6 +8,8 @@ import CommunicationModel from './components/CommunicationModel';
 import Process from './components/Process';
 import MediaAnalytics from './components/MediaAnalytics';
 import FilmWork from './components/FilmWork';
+import Portfolio from './components/Portfolio';
+import SuccessStories from './components/SuccessStories';
 import Clients from './components/Clients';
 import Director from './components/Director';
 import CTA from './components/CTA';
@@ -26,6 +28,8 @@ function App() {
         <Process />
         <MediaAnalytics />
         <FilmWork />
+        <Portfolio />
+        <SuccessStories />
         <Clients />
         <Director />
         <CTA />
