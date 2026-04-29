@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiMapPin, FiMail, FiPhone, FiInstagram, FiLinkedin, FiFacebook } from 'react-icons/fi';
 import './Footer.css';
 
@@ -9,8 +10,10 @@ const Footer = () => {
         <div className="footer-top grid">
           
           <div className="footer-about">
-            <img src="/logo.png" alt="Baiji Entertainments Logo" className="footer-logo" />
-            <p>
+            <Link to="/" className="footer-logo-link">
+              <img src="/logo.png" alt="Baiji Entertainments Logo" className="footer-logo" />
+            </Link>
+            <p className="footer-tagline">
               A premium full-service creative advertising and entertainment agency based in Delhi & Mumbai. We build brands that matter.
             </p>
             <div className="social-links">
@@ -23,10 +26,10 @@ const Footer = () => {
           <div className="footer-links">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#work">Work</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><a href="/#services">Services</a></li>
+              <li><a href="/#work">Work</a></li>
             </ul>
           </div>
           
@@ -42,7 +45,6 @@ const Footer = () => {
           <div className="footer-map">
             <h3>Our Locations</h3>
             <div className="map-container">
-              {/* Google Maps iframe for Delhi/Mumbai representation */}
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.114827184136!2d77.2090212!3d28.6139391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
                 width="100%" 

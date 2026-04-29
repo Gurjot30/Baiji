@@ -9,6 +9,10 @@
   font-size: 1.1rem;
 }
 
+.c-model-section .heading-md {
+  color: #ffffff;
+}
+
 .model-container {
   display: flex;
   justify-content: center;

@@ -15,6 +15,7 @@
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  height: 120px;
 }
 
 .nav-container {
@@ -24,11 +25,20 @@
   height: 100%;
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
 .nav-logo {
-  height: 120px;
+  height: 160px; /* Increased from 100px */
   width: auto;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .nav-logo {
+  height: 100px; /* Increased from 70px */
 }
 
 .logo:hover .nav-logo {
@@ -61,5 +71,8 @@
 @media (max-width: 768px) {
   .nav-links, .nav-cta {
     display: none;
+  }
+  .nav-logo {
+    height: 100px;
   }
 }
