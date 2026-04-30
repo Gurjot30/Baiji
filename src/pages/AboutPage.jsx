@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import About from '../components/About';
+import AboutUs from '../components/AboutUs';
 import Process from '../components/Process';
 import Director from '../components/Director';
 import CTA from '../components/CTA';
@@ -34,7 +34,7 @@ const AboutPage = () => {
         </div>
       </section>
       
-      <About />
+      <AboutUs />
       <Process />
       <Director />
       <CTA />

@@ -53,7 +53,7 @@ const SuccessStories = () => {
     <section className="section success-section" id="stories" ref={sectionRef}>
       <div className="container">
         <div className="section-header text-center">
-          <h2 className="heading-md">Success Stories</h2>
+          <h2 className="heading-md"><span style={{ color: '#fff' }}>Success</span> <span className="text-accent">Stories</span></h2>
           <div className="divider mx-auto"></div>
           <p className="subtitle">Tangible results for world-class brands</p>
         </div>

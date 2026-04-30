@@ -25,7 +25,7 @@ const Navbar = () => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><a href="/#services">Services</a></li>
-          <li><a href="/#work">Work</a></li>
+          <li><Link to="/portfolio">Portfolio</Link></li>
           <li><a href="/#contact">Contact</a></li>
         </ul>
         <button className="btn btn-outline nav-cta">Work With Us</button>

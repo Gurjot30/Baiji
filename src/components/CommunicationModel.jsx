@@ -19,7 +19,7 @@ const CommunicationModel = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="heading-md">Our Communication Model</h2>
+          <h2 className="heading-md"><span style={{ color: '#fff' }}>Our Communication</span> <span className="text-accent">Model</span></h2>
           <div className="divider mx-auto"></div>
           <p className="subtitle">The 3C approach to holistic brand strategy</p>
         </motion.div>

@@ -9,9 +9,8 @@ const Services = () => {
     { icon: <FiPieChart />, title: "Media Strategy" },
     { icon: <FiVideo />, title: "Film Production" },
     { icon: <FiMonitor />, title: "Digital Marketing" },
-    { icon: <FiRadio />, title: "PR & Events" },
     { icon: <FiStar />, title: "Celebrity Management" },
-    { icon: <FiActivity />, title: "Sports Marketing" }
+    { icon: <FiActivity />, title: "Sports & Film Marketing" }
   ];
 
   return (

@@ -19,7 +19,7 @@ const Clients = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="heading-md">Trusted By</h2>
+          <h2 className="heading-md"><span style={{ color: '#fff' }}>Trusted</span> <span className="text-accent">By</span></h2>
           <div className="divider mx-auto"></div>
         </motion.div>
 

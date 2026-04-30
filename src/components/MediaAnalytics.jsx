@@ -20,7 +20,7 @@ const MediaAnalytics = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="heading-lg">Media & Analytics</h2>
+          <h2 className="heading-lg"><span style={{ color: '#fff' }}>Media &</span> <span className="text-accent">Analytics</span></h2>
           <p className="analytics-subtitle">Data-driven decisions for maximum ROI and media efficiency.</p>
           
           <div className="stats-grid">
