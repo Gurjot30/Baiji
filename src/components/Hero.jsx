@@ -1,89 +1,107 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import './Hero.css';
 
+const slides = [
+  {
+    id: 1,
+    image: "/hero_slide_1.jpg",
+    titleLine1: "A Step to",
+    titleLine2: "Brand Building",
+    subtitle: "Creative Strategy | Media | Film | Celebrity Management",
+  },
+  {
+    id: 2,
+    image: "/hero_slide_2.jpg",
+    titleLine1: "Cinematic",
+    titleLine2: "Storytelling",
+    subtitle: "World-class film production and visual narratives.",
+  },
+  {
+    id: 3,
+    image: "/hero_slide_3.jpg",
+    titleLine1: "Data-Driven",
+    titleLine2: "Impact",
+    subtitle: "Precision analytics to maximize your brand's ROI.",
+  }
+];
+
 const Hero = () => {
-  const line1 = "A Step to";
-  const line2 = "Brand Building";
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const container = {
-    hidden: { opacity: 0 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      transition: { 
-        staggerChildren: 0.4, // Slower stagger between words
-        delayChildren: 0.1 * i 
-      },
-    }),
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
-  const child = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        damping: 15,
-        stiffness: 40, // Lower stiffness for slower movement
-      },
-    },
-    hidden: {
-      opacity: 0,
-      y: 20,
-    },
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 7000); // Auto-advance every 7 seconds
+    return () => clearInterval(timer);
+  }, [currentSlide]);
 
   return (
     <section id="home" className="hero flex-center">
-      <div className="hero-bg" style={{ backgroundImage: 'url(/hero_bg.png)' }}>
-        <div className="overlay"></div>
-      </div>
-      
-      <div className="container hero-content">
-        <motion.h1 
-          className="heading-xl"
-          variants={container}
-          initial="hidden"
-          animate="visible"
-        >
-          {line1.split(" ").map((word, index) => (
-            <motion.span
-              variants={child}
-              style={{ display: "inline-block", marginRight: "0.2em" }}
-              key={index}
-            >
-              {word}
-            </motion.span>
-          ))}
-          <br />
-          {line2.split(" ").map((word, index) => (
-            <motion.span
-              variants={child}
-              style={{ display: "inline-block", marginRight: "0.2em" }}
-              key={index}
-              className="text-accent"
-            >
-              {word}
-            </motion.span>
-          ))}
-        </motion.h1>
-        
-        <motion.p 
-          className="hero-subtitle"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 2.5 }} // Increased delay to wait for header
-        >
-          Creative Strategy | Media | Film | Celebrity Management
-        </motion.p>
-        
+      <AnimatePresence initial={false}>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 3.0 }} // Increased delay
+          key={currentSlide}
+          className="hero-bg"
+          style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
         >
-          <a href="#contact" className="btn btn-primary">Work With Us</a>
+          <div className="overlay"></div>
         </motion.div>
+      </AnimatePresence>
+      
+      <div className="container hero-content text-center">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h1 className="heading-xl">
+              {slides[currentSlide].titleLine1} <br />
+              <span className="text-accent">{slides[currentSlide].titleLine2}</span>
+            </h1>
+            
+            <p className="hero-subtitle">
+              {slides[currentSlide].subtitle}
+            </p>
+            
+            <div className="hero-cta">
+              <a href="#contact" className="btn btn-primary">Work With Us</a>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <div className="hero-controls">
+        <button className="hero-arrow prev-arrow" onClick={prevSlide}>
+          <ChevronLeft size={30} />
+        </button>
+        <div className="hero-dots">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`hero-dot ${index === currentSlide ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+            />
+          ))}
+        </div>
+        <button className="hero-arrow next-arrow" onClick={nextSlide}>
+          <ChevronRight size={30} />
+        </button>
       </div>
     </section>
   );
