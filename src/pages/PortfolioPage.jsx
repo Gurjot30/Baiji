@@ -12,6 +12,14 @@ const portfolioData = [
   { id: 6, title: "Eco Box", category: "Packaging", image: "https://images.unsplash.com/photo-1605648813233-a267f8eb215e?auto=format&fit=crop&q=80&w=800" },
   { id: 7, title: "Social Campaign", category: "Digital", image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800" },
   { id: 8, title: "Annual Report", category: "Print", image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800" },
+  { id: 9, title: "Cinematic Trailer", category: "Films", image: "https://images.unsplash.com/photo-1579961139417-380eb9a5530d?auto=format&fit=crop&q=80&w=800" },
+  { id: 10, title: "Web App UI", category: "Digital", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" },
+  { id: 11, title: "Artisan Coffee", category: "Packaging", image: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&q=80&w=800" },
+  { id: 12, title: "Editorial Spread", category: "Print", image: "https://images.unsplash.com/photo-1621087816694-a3f81e8c0576?auto=format&fit=crop&q=80&w=800" },
+  { id: 13, title: "Documentary Short", category: "Films", image: "https://images.unsplash.com/photo-1518131672697-613becd4fab5?auto=format&fit=crop&q=80&w=800" },
+  { id: 14, title: "Interactive 3D", category: "Digital", image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" },
+  { id: 15, title: "Limited Edition Box", category: "Packaging", image: "https://images.unsplash.com/photo-1622325376228-5694c9f136fc?auto=format&fit=crop&q=80&w=800" },
+  { id: 16, title: "Brand Identity Book", category: "Print", image: "https://images.unsplash.com/photo-1544605988-c71123cbac2d?auto=format&fit=crop&q=80&w=800" },
 ];
 
 const categories = ["All", "Films", "Digital", "Print", "Packaging"];
