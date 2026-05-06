@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AboutUs from '../components/AboutUs';
 import Process from '../components/Process';
 import Director from '../components/Director';
+import Team from '../components/Team';
 import CTA from '../components/CTA';
 import { motion } from 'framer-motion';
 
@@ -36,6 +37,7 @@ const AboutPage = () => {
       
       <AboutUs />
       <Process />
+      <Team />
       <Director />
       <CTA />
     </div>
