@@ -12,13 +12,7 @@ const portfolioData = {
     'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800',
     'https://images.unsplash.com/photo-1542204112-1630f827af05?auto=format&fit=crop&q=80&w=800',
   ],
-  digital: [
-    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800',
-  ],
-  print: [
+  cobranding: [
     'https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?auto=format&fit=crop&q=80&w=800',
     'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800',
     'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800',
@@ -68,7 +62,9 @@ const Portfolio = () => {
 
         {Object.entries(portfolioData).map(([category, images]) => (
           <div key={category} className="portfolio-category">
-            <h3 className="category-title">{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+            <h3 className="category-title">
+              {category === 'cobranding' ? 'Co Branding' : category.charAt(0).toUpperCase() + category.slice(1)}
+            </h3>
             <div className="slider-container">
               <div
                 className="slider-track"
