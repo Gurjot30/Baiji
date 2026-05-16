@@ -12,7 +12,7 @@
 }
 
 .wsua-header h2 {
-  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 1rem;

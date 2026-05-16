@@ -10,7 +10,6 @@ import FilmWork from '../components/FilmWork';
 import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
 import Clients from '../components/Clients';
-import CTA from '../components/CTA';
 
 const Home = () => {
   return (
@@ -26,7 +25,6 @@ const Home = () => {
       <Portfolio />
       <Testimonials />
       <Clients />
-      <CTA />
     </>
   );
 };

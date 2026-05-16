@@ -3,10 +3,28 @@ import { motion } from 'framer-motion';
 import './Clients.css';
 
 const Clients = () => {
-  // Using simple text placeholders for logos to simulate a logo grid
   const clientLogos = [
-    "BRAND ONE", "STUDIO X", "GLOBE MEDIA", "PRIME TV", 
-    "NEXUS", "VISTA", "ELEVATE", "MOMENTUM"
+    '/quickheal.png',
+    '/star555.png',
+    '/srmb-tmt.png',
+    '/aptech.png',
+    '/laminex.png',
+    '/dominos-transparent.png',
+    '/kethini.png',
+    '/magic-moments.png',
+    '/harrison.png',
+    '/essdee.png',
+    '/kuber.png',
+    '/oshea.png',
+    '/rasna.png',
+    '/ascentia.png',
+    '/sujata.png',
+    '/toptech.png',
+    '/railway.png',
+    '/popular.png',
+    '/redcliffe.png',
+    '/sarvottam.png',
+    '/toptech-new.png'
   ];
 
   return (
@@ -19,7 +37,7 @@ const Clients = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="heading-md"><span style={{ color: '#fff' }}>Trusted</span> <span className="text-accent">By</span></h2>
+          <h2 className="heading-lg" style={{ fontSize: '3.5rem' }}><span style={{ color: '#fff' }}>Trusted</span> <span className="text-accent">By</span></h2>
           <div className="divider mx-auto"></div>
         </motion.div>
 
@@ -33,7 +51,7 @@ const Clients = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
             >
-              <span>{logo}</span>
+              <img src={logo} alt={`Client ${index + 1}`} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
           ))}
         </div>

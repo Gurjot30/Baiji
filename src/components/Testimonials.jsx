@@ -71,8 +71,8 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="badge">Client Reviews</span>
-          <h2 className="heading-md"><span style={{ color: '#fff' }}>What They</span> <span className="text-accent">Say About Us</span></h2>
+          <span className="badge" style={{ fontSize: '1.1rem', padding: '8px 20px', marginBottom: '1.5rem' }}>Client Reviews</span>
+          <h2 className="heading-lg"><span style={{ color: '#fff' }}>What They</span> <span className="text-accent">Say About Us</span></h2>
           <div className="divider mx-auto"></div>
         </motion.div>
 

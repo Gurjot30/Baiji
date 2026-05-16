@@ -20,9 +20,7 @@ const FilmWork = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="heading-md"><span style={{ color: '#fff' }}>Film &</span> <span className="text-accent">Entertainment</span></h2>
-          <div className="divider mx-auto"></div>
-          <p className="subtitle">Showcasing our collaborations and brand integrations.</p>
+          <h2 className="heading-lg"><span style={{ color: '#fff' }}>Film &</span> <span className="text-accent">Entertainment</span></h2>
         </motion.div>
 
         <div className="film-grid">

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Portfolio.css';
@@ -7,16 +8,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 const portfolioData = {
   films: [
-    'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1542204112-1630f827af05?auto=format&fit=crop&q=80&w=800',
+    '/film-zero.png',
+    '/film-sultan.png',
+    '/film-dreamgirl2.png',
+    '/film-bhooth-bangla.jpg',
+    '/film-thamma.png',
+    '/film-baaghi4.png',
+    '/film-groundzero.png',
+    '/film-husbandbiwi.png',
+    '/film-singhamagain.png',
+    '/film-maidaan.png',
   ],
   cobranding: [
-    'https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&q=80&w=800',
+    '/quickheal.png',
+    '/star555.png',
+    '/srmb-tmt.png',
+    '/aptech.png',
+    '/laminex.png',
+    '/dominos-transparent.png',
+    '/kethini.png',
+    '/magic-moments.png',
+    '/harrison.png',
+    '/essdee.png',
+    '/kuber.png',
+    '/oshea.png',
+    '/rasna.png',
+    '/ascentia.png',
+    '/sujata.png',
+    '/toptech.png',
+    '/railway.png',
+    '/popular.png',
+    '/redcliffe.png',
+    '/sarvottam.png',
+    '/toptech-new.png'
   ],
 };
 
@@ -25,16 +49,27 @@ const Portfolio = () => {
   const sliderRefs = useRef({});
 
   useEffect(() => {
+    const timelines = {};
+
     Object.keys(portfolioData).forEach((category) => {
       const slider = sliderRefs.current[category];
       if (slider) {
         const totalWidth = slider.scrollWidth;
-        gsap.to(slider, {
-          x: `-${totalWidth / 2}`,
-          duration: 20,
+        const distance = totalWidth / 2;
+        const speed = 50; // pixels per second
+        const duration = distance / speed;
+
+        const anim = gsap.to(slider, {
+          x: `-${distance}`,
+          duration: duration,
           ease: 'none',
           repeat: -1,
         });
+
+        timelines[category] = anim;
+
+        slider.addEventListener('mouseenter', () => anim.pause());
+        slider.addEventListener('mouseleave', () => anim.play());
       }
     });
 
@@ -52,18 +87,21 @@ const Portfolio = () => {
         },
       }
     );
+
+    return () => {
+      Object.values(timelines).forEach(anim => anim.kill());
+    };
   }, []);
 
   return (
     <section className="portfolio-section" id="portfolio" ref={sectionRef}>
       <div className="container">
-        <h2 className="section-title">Our Portfolio</h2>
-        <p className="section-subtitle">Excellence across every medium</p>
+        <h2 className="section-title"><span style={{ color: '#fff' }}>Our</span> <span className="text-accent">Portfolio</span></h2>
 
         {Object.entries(portfolioData).map(([category, images]) => (
           <div key={category} className="portfolio-category">
             <h3 className="category-title">
-              {category === 'cobranding' ? 'Co Branding' : category.charAt(0).toUpperCase() + category.slice(1)}
+              {category === 'films' ? 'Films' : 'Co Branding'}
             </h3>
             <div className="slider-container">
               <div
@@ -71,7 +109,7 @@ const Portfolio = () => {
                 ref={(el) => (sliderRefs.current[category] = el)}
               >
                 {[...images, ...images].map((img, index) => (
-                  <div key={index} className="portfolio-item">
+                  <div key={index} className={`portfolio-item portfolio-item-${category}`}>
                     <img src={img} alt={`${category} work ${index}`} />
                   </div>
                 ))}

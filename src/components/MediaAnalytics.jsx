@@ -61,15 +61,6 @@ const MediaAnalytics = () => {
           >
             <span style={{ color: '#fff' }}>Media &</span> <span className="text-accent">Analytics</span>
           </motion.h2>
-          <motion.p 
-            className="analytics-subtitle"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            Data-driven decisions for maximum ROI and media efficiency.
-          </motion.p>
         </div>
         
         <div className="stats-grid">

@@ -2,8 +2,8 @@
   background-color: var(--bg-color);
   position: relative;
   overflow: hidden;
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
 }
 
 .c-model-section .subtitle {

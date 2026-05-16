@@ -31,7 +31,7 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', fontFamily: "'Outfit', sans-serif", fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}
+                style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontFamily: "'Outfit', sans-serif", fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}
               >
                 About <span className="text-accent">Us</span>
               </motion.h2>
