@@ -1,74 +1,78 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiTarget, FiZap, FiSettings, FiAward } from 'react-icons/fi';
+import { FiEdit3, FiFilm, FiGlobe, FiTrendingUp, FiMessageCircle, FiCheckCircle } from 'react-icons/fi';
 import './WhatSetsUsApart.css';
 
 const WhatSetsUsApart = () => {
   const features = [
     {
-      icon: <FiTarget />,
-      title: "Smart Thinking",
-      desc: "Strategic approaches that target core audience behavior and maximize brand impact."
+      icon: <FiEdit3 />,
+      title: "Creative & Innovative Approach",
+      desc: "Delivering unique and out-of-the-box campaigns that captivate audiences and break industry norms.",
+      span: true
     },
     {
-      icon: <FiZap />,
-      title: "Innovation & Transparency",
-      desc: "Cutting-edge creative solutions delivered with complete operational clarity."
+      icon: <FiFilm />,
+      title: "Entertainment Expertise",
+      desc: "Deep-rooted connections across cinema and media.",
+      span: false
     },
     {
-      icon: <FiSettings />,
-      title: "Custom Solutions",
-      desc: "Tailor-made campaigns designed specifically for every brand's unique identity."
+      icon: <FiGlobe />,
+      title: "360° Brand Solutions",
+      desc: "Comprehensive strategies covering every touchpoint.",
+      span: false
     },
     {
-      icon: <FiAward />,
-      title: "High-Quality Execution",
-      desc: "Flawless production and implementation across all media channels."
+      icon: <FiTrendingUp />,
+      title: "ROI-Focused",
+      desc: "Data-driven media planning for maximum return.",
+      span: false
+    },
+    {
+      icon: <FiMessageCircle />,
+      title: "Customized Communication Strategy",
+      desc: "Tailor-made messaging to perfectly resonate with your specific target demographic and build loyalty.",
+      span: true
+    },
+    {
+      icon: <FiCheckCircle />,
+      title: "Quality & Transparency",
+      desc: "Uncompromising execution with operational clarity.",
+      span: false
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-  };
-
   return (
-    <section className="section wsua-section">
+    <section className="wsua-section">
       <div className="container">
         <motion.div 
-          className="section-header text-center"
+          className="wsua-header"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="heading-md">What Sets Us Apart</h2>
-          <div className="divider mx-auto"></div>
+          <h2>Why Brands Choose <span className="text-accent">Baiji</span></h2>
+          <p className="section-subtitle">Our core pillars of excellence</p>
         </motion.div>
 
-        <motion.div 
-          className="grid features-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
+        <div className="bento-grid">
           {features.map((feature, index) => (
-            <motion.div key={index} className="feature-card glass-panel" variants={itemVariants}>
-              <div className="feature-icon">{feature.icon}</div>
+            <motion.div 
+              key={index} 
+              className={`bento-card ${feature.span ? 'span-2' : ''}`}
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="bento-icon">{feature.icon}</div>
               <h3>{feature.title}</h3>
               <p>{feature.desc}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

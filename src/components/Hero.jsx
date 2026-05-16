@@ -7,23 +7,23 @@ const slides = [
   {
     id: 1,
     image: "/hero_slide_1.jpg",
-    titleLine1: "A Step to",
-    titleLine2: "Brand Building",
-    subtitle: "Creative Strategy | Media | Film | Celebrity Management",
+    titleLine1: "Where Brands",
+    titleLine2: "Meet Entertainment",
+    subtitle: "A unified approach to marketing and cinematic storytelling.",
   },
   {
     id: 2,
     image: "/hero_slide_2.jpg",
-    titleLine1: "Cinematic",
-    titleLine2: "Storytelling",
-    subtitle: "World-class film production and visual narratives.",
+    titleLine1: "Creative Strategy.",
+    titleLine2: "Media Power. Film Integration.",
+    subtitle: "End-to-end solutions that elevate your brand's presence.",
   },
   {
     id: 3,
     image: "/hero_slide_3.jpg",
-    titleLine1: "Data-Driven",
-    titleLine2: "Impact",
-    subtitle: "Precision analytics to maximize your brand's ROI.",
+    titleLine1: "Building Brands Through",
+    titleLine2: "Cinema, Sports & Digital Impact",
+    subtitle: "Creating culturally relevant milestones and lasting connections.",
   }
 ];
 
@@ -74,10 +74,6 @@ const Hero = () => {
               {slides[currentSlide].titleLine1} <br />
               <span className="text-accent">{slides[currentSlide].titleLine2}</span>
             </h1>
-            
-            <p className="hero-subtitle">
-              {slides[currentSlide].subtitle}
-            </p>
             
             <div className="hero-cta">
               <a href="#contact" className="btn btn-primary">Work With Us</a>

@@ -1,6 +1,6 @@
 .team-section {
   background: var(--bg-color);
-  padding: 120px 5%;
+  padding: 60px 5%;
   position: relative;
 }
 
@@ -30,7 +30,7 @@
 .team-image-wrapper {
   position: relative;
   height: 100%;
-  min-height: 500px;
+  min-height: 350px;
   overflow: hidden;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .team-bio-wrapper {
-  padding: 50px;
+  padding: 30px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@
 }
 
 .team-name {
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: #fff;
   margin-bottom: 0.5rem;
   line-height: 1.1;
@@ -82,9 +82,9 @@
 
 .team-bio-text p {
   color: #ccc;
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .team-bio-text p:last-child {

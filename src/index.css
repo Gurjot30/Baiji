@@ -24,7 +24,8 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg-color);
+  background: linear-gradient(180deg, #000000 0%, #1a1a1a 30%, #2c241a 50%, #080808 75%, #000000 100%);
+  background-attachment: fixed;
   color: var(--text-primary);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -47,16 +48,16 @@ ul {
 
 /* Typography Utilities */
 .heading-xl {
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
   letter-spacing: -0.02em;
 }
 
 .heading-lg {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
 }
 
 .heading-md {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
 }
 
 .text-gradient {
@@ -86,6 +87,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .grid {

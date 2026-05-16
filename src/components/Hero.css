@@ -32,6 +32,8 @@
   z-index: 2;
   width: 100%;
   max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .hero .heading-xl {
@@ -52,6 +54,8 @@
 
 .hero-cta {
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 /* Controls */

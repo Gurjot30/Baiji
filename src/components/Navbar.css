@@ -31,14 +31,14 @@
 }
 
 .nav-logo {
-  height: 160px; /* Increased from 100px */
+  height: 220px; /* Increased from 160px */
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled .nav-logo {
-  height: 100px; /* Increased from 70px */
+  height: 140px; /* Increased from 100px */
 }
 
 .logo:hover .nav-logo {
@@ -73,6 +73,6 @@
     display: none;
   }
   .nav-logo {
-    height: 100px;
+    height: 140px;
   }
 }

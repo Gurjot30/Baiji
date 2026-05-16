@@ -28,7 +28,6 @@ const Navbar = () => {
           <li><Link to="/portfolio">Portfolio</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
-        <button className="btn btn-outline nav-cta">Work With Us</button>
       </div>
     </nav>
   );
