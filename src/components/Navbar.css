@@ -5,8 +5,12 @@
   width: 100%;
   height: var(--nav-height);
   z-index: 1000;
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0 5%;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
 }
 
 .navbar.scrolled {
@@ -15,7 +19,7 @@
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  height: 120px;
+  height: 80px;
 }
 
 .nav-container {
@@ -31,14 +35,14 @@
 }
 
 .nav-logo {
-  height: 220px; /* Increased from 160px */
+  height: 140px; /* Reduced from 220px */
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled .nav-logo {
-  height: 140px; /* Increased from 100px */
+  height: 80px; /* Reduced from 140px */
 }
 
 .logo:hover .nav-logo {

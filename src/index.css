@@ -73,7 +73,7 @@ ul {
 
 /* Layout Utilities */
 .section {
-  padding: 100px 5%;
+  padding: 50px 5%;
   position: relative;
   z-index: 1;
 }

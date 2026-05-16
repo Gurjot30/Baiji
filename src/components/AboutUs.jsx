@@ -8,7 +8,7 @@ const AboutUs = () => {
       <div className="about-bg-text">THE AGENCY</div>
       
       <div className="container">
-        <div className="text-center" style={{ marginBottom: '4rem', position: 'relative', zIndex: 2 }}>
+        <div className="text-right" style={{ marginBottom: '2rem', position: 'relative', zIndex: 2 }}>
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,16 +62,6 @@ const AboutUs = () => {
                 From Bollywood collaborations to nationwide media campaigns, we transform ideas into unforgettable brand experiences.
               </p>
             </motion.div>
-
-            <motion.h3 
-              className="about-footer-highlight"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              360° Advertising & <br/>Entertainment Solutions
-            </motion.h3>
           </div>
 
         </div>

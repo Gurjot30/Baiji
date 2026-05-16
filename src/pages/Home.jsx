@@ -8,7 +8,6 @@ import CommunicationModel from '../components/CommunicationModel';
 import MediaAnalytics from '../components/MediaAnalytics';
 import FilmWork from '../components/FilmWork';
 import Portfolio from '../components/Portfolio';
-import SuccessStories from '../components/SuccessStories';
 import Testimonials from '../components/Testimonials';
 import Clients from '../components/Clients';
 import CTA from '../components/CTA';
@@ -25,7 +24,6 @@ const Home = () => {
       <MediaAnalytics />
       <FilmWork />
       <Portfolio />
-      <SuccessStories />
       <Testimonials />
       <Clients />
       <CTA />
