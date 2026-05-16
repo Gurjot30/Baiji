@@ -71,6 +71,10 @@ ul {
   color: var(--accent-color);
 }
 
+.text-right {
+  text-align: right;
+}
+
 /* Layout Utilities */
 .section {
   padding: 50px 5%;
@@ -91,6 +95,10 @@ ul {
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .grid {

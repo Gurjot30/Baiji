@@ -8,27 +8,7 @@ const AboutUs = () => {
       <div className="about-bg-text">THE AGENCY</div>
       
       <div className="container">
-        <div className="text-right" style={{ marginBottom: '2rem', position: 'relative', zIndex: 2 }}>
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', fontFamily: "'Outfit', sans-serif", fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }}
-          >
-            About <span className="text-accent">Us</span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-accent"
-            style={{ fontSize: '1.2rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase' }}
-          >
-            A Step Towards Brand Building
-          </motion.p>
-        </div>
+
 
         <div className="about-innovative-grid">
           
@@ -45,6 +25,27 @@ const AboutUs = () => {
           </div>
 
           <div className="about-right">
+            <div className="text-left" style={{ marginBottom: '1.5rem', textAlign: 'left' }}>
+              <motion.h2 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.5rem)', fontFamily: "'Outfit', sans-serif", fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.5rem' }}
+              >
+                About <span className="text-accent">Us</span>
+              </motion.h2>
+              <motion.p 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-accent"
+                style={{ fontSize: '1rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase' }}
+              >
+                A Step Towards Brand Building
+              </motion.p>
+            </div>
             <motion.div 
               className="about-body-text"
               initial={{ opacity: 0, y: 30 }}
