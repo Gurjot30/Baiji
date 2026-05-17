@@ -5,9 +5,9 @@ import './FilmWork.css';
 
 const FilmWork = () => {
   const projects = [
-    { title: "Bollywood Integrations", category: "Film", image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800" },
-    { title: "Brand Stories", category: "Commercial", image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&q=80&w=800" },
-    { title: "Motion Graphics", category: "Digital", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" }
+    { title: "Bollywood Integrations", category: "Film", image: "/film-war.jpg" },
+    { title: "Brand Stories", category: "Commercial", image: "/film-commercial.png" },
+    { title: "Motion Graphics", category: "Digital", image: "/film-digital.png" }
   ];
 
   return (

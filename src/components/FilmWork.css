@@ -17,9 +17,12 @@
 }
 
 .film-image {
-  height: 400px;
+  aspect-ratio: 2 / 3;
+  width: 100%;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0a0a0a;
   transition: transform 0.6s ease;
 }
 

@@ -28,7 +28,15 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><a href="/#services">Services</a></li>
+          <li className="dropdown-container">
+            <a href="/#services" className="dropdown-trigger">Services</a>
+            <ul className="dropdown-menu">
+              <li><Link to="/services/brand-creative-strategy">Brand & Creative Strategy</Link></li>
+              <li><Link to="/services/production-entertainment">Production & Entertainment</Link></li>
+              <li><Link to="/services/digital-performance-marketing">Digital & Performance Marketing</Link></li>
+              <li><Link to="/services/integrated-brand-solutions">Integrated Brand Solutions</Link></li>
+            </ul>
+          </li>
           <li><Link to="/portfolio">Portfolio</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>

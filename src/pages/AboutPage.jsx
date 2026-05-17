@@ -40,53 +40,82 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="editorial-content-section">
+      <section className="our-story-typographic">
         <div className="container">
-          <div className="editorial-grid">
-            <motion.div 
-              className="editorial-left"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <p className="editorial-huge-text">
-                Since our inception, we have been driven by a singular goal: to <span className="text-accent">revolutionize</span> brand communication.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className="editorial-right"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <p className="editorial-body">
-                Through cinematic storytelling, strategic media placements, and deep industry connections, we transform ideas into culturally relevant milestones.
-              </p>
-              <p className="editorial-body">
-                Every project is a partnership. We collaborate closely with our clients to understand their core values, ensuring that our campaigns not only reach millions but also resonate deeply. Welcome to the intersection of art, strategy, and unparalleled scale.
-              </p>
-              
-              <div className="editorial-stats">
-                <div className="e-stat">
-                  <h2>11+</h2>
-                  <p>Years</p>
+          <div className="typographic-grid">
+            <div className="typographic-left">
+              <motion.div 
+                className="sticky-content"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="massive-title">OUR<br/><span className="text-outline">STORY</span></h2>
+                <div className="accent-separator"></div>
+                <div className="floating-metrics">
+                  <div className="f-metric">
+                    <span className="number">11+</span>
+                    <span className="label">Years of Innovation</span>
+                  </div>
+                  <div className="f-metric">
+                    <span className="number">360°</span>
+                    <span className="label">Strategic Approach</span>
+                  </div>
+                  <div className="f-metric">
+                    <span className="number">100%</span>
+                    <span className="label">Commitment</span>
+                  </div>
                 </div>
-                <div className="e-stat">
-                  <h2>360°</h2>
-                  <p>Strategy</p>
+              </motion.div>
+            </div>
+
+            <div className="typographic-right">
+              <motion.div 
+                className="story-paragraph-card"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="card-number">01</div>
+                <div className="card-content">
+                  <h3>The Genesis</h3>
+                  <p>Since our inception, we have been driven by a singular goal: to revolutionize the way brands connect with their audiences. We didn't want to just create campaigns; we set out to architect cultural moments that echo across the industry.</p>
                 </div>
-                <div className="e-stat">
-                  <h2>100%</h2>
-                  <p>Commitment</p>
+              </motion.div>
+
+              <motion.div 
+                className="story-paragraph-card"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                <div className="card-number">02</div>
+                <div className="card-content">
+                  <h3>The Evolution</h3>
+                  <p>Through cinematic storytelling, strategic media placements, and deep industry connections, we transform ideas into culturally relevant milestones. We successfully bridged the gap between raw entertainment and pure brand strategy.</p>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+
+              <motion.div 
+                className="story-paragraph-card"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="card-number">03</div>
+                <div className="card-content">
+                  <h3>The Partnership</h3>
+                  <p>Every project is a partnership built on transparency, vision, and scale. We collaborate closely with our clients to understand their core values, ensuring that our campaigns not only reach millions but resonate deeply with every single one.</p>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
       
       <Director />
       <Team />

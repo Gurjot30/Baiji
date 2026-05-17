@@ -54,7 +54,6 @@ const WhatSetsUsApart = () => {
           transition={{ duration: 0.6 }}
         >
           <h2>Why Brands Choose <span className="text-accent">Baiji</span></h2>
-          <p className="section-subtitle">Our core pillars of excellence</p>
         </motion.div>
 
         <div className="bento-grid">

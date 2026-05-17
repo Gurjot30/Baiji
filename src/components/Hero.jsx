@@ -20,7 +20,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/hero_slide_3.jpg",
+    image: "/hero_slide_3.png",
     titleLine1: "Building Brands Through",
     titleLine2: "Cinema, Sports & Digital Impact",
     subtitle: "Creating culturally relevant milestones and lasting connections.",
