@@ -27,11 +27,10 @@ const Footer = () => {
           <div className="footer-col">
             <h3>Our Services</h3>
             <ul>
-              <li><a href="/#services">Film Production</a></li>
-              <li><a href="/#services">Digital Marketing</a></li>
-              <li><a href="/#services">Celebrity Management</a></li>
-              <li><a href="/#services">Media Planning</a></li>
-              <li><a href="/#services">Sports Branding</a></li>
+              <li><Link to="/services/brand-creative-strategy">Brand & Creative Strategy</Link></li>
+              <li><Link to="/services/production-entertainment">Production & Entertainment</Link></li>
+              <li><Link to="/services/digital-performance-marketing">Digital & Performance Marketing</Link></li>
+              <li><Link to="/services/integrated-brand-solutions">Integrated Brand Solutions</Link></li>
             </ul>
           </div>
           
@@ -42,7 +41,6 @@ const Footer = () => {
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/portfolio">Portfolio</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
-              <li><a href="/#work">Our Work</a></li>
             </ul>
           </div>
           
