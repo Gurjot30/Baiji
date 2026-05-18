@@ -10,6 +10,7 @@ import ContactPage from './pages/ContactPage';
 import BrandStrategyPage from './pages/BrandStrategyPage';
 import ProductionEntertainmentPage from './pages/ProductionEntertainmentPage';
 import DigitalMarketingPage from './pages/DigitalMarketingPage';
+import IntegratedBrandPage from './pages/IntegratedBrandPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/services/brand-creative-strategy" element={<BrandStrategyPage />} />
             <Route path="/services/production-entertainment" element={<ProductionEntertainmentPage />} />
             <Route path="/services/digital-performance-marketing" element={<DigitalMarketingPage />} />
+            <Route path="/services/integrated-brand-solutions" element={<IntegratedBrandPage />} />
           </Routes>
         </main>
         <Footer />

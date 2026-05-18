@@ -123,7 +123,7 @@
 }
 
 .bs-visual-section {
-  padding: 140px 0 100px 0;
+  padding: 80px 0 60px 0;
   position: relative;
   z-index: 2;
 }
@@ -237,14 +237,14 @@
 
 /* EXPERTISE SECTION */
 .bs-expertise {
-  padding: 120px 0;
+  padding: 70px 0;
   position: relative;
   background: var(--bg-primary);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .bs-expertise-header {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
@@ -355,14 +355,14 @@
 
 /* PROCESS TIMELINE SECTION */
 .bs-process {
-  padding: 120px 0;
+  padding: 70px 0;
   background: var(--bg-primary);
   position: relative;
 }
 
 .bs-process-header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .bs-process-title {
@@ -399,7 +399,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   position: relative;
   width: 100%;
 }
@@ -526,7 +526,7 @@
 
 /* WHY CHOOSE US SECTION */
 .bs-why-choose {
-  padding: 120px 0;
+  padding: 70px 0;
   background: var(--bg-primary);
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -561,7 +561,7 @@
   height: 2px;
   width: 80px;
   background: var(--accent-color);
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .bs-why-image-container {
