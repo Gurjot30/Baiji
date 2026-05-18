@@ -302,6 +302,111 @@ const DigitalMarketingPage = () => {
         </div>
       </section>
 
+      {/* Our Digital Marketing Process */}
+      <section className="dm-process-section">
+        <div className="dm-process-grid-bg"></div>
+        <div className="container relative-z">
+          <motion.div
+            className="dm-process-header"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="dm-process-label">How We Work</span>
+            <h2>Our Digital Marketing <span className="text-accent">Process</span></h2>
+          </motion.div>
+
+          <div className="dm-process-flow">
+            {[
+              {
+                num: "01",
+                title: "Brand & Audience Analysis",
+                desc: "Understanding business goals, audience behavior, and digital opportunities.",
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <circle cx="24" cy="18" r="8"/>
+                    <path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16"/>
+                    <path d="M34 12l6-6M34 12l-4 2M34 12l2-4" strokeLinecap="round"/>
+                    <circle cx="38" cy="10" r="2" fill="currentColor" stroke="none"/>
+                  </svg>
+                )
+              },
+              {
+                num: "02",
+                title: "Strategy Development",
+                desc: "Creating customized digital marketing and campaign strategies.",
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <rect x="6" y="6" width="36" height="36" rx="4"/>
+                    <path d="M14 24l6 6 14-14" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M14 14h8M14 18h6" strokeLinecap="round" opacity="0.5"/>
+                  </svg>
+                )
+              },
+              {
+                num: "03",
+                title: "Creative Content Production",
+                desc: "Designing engaging creatives, videos, and promotional content.",
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <rect x="6" y="10" width="36" height="28" rx="3"/>
+                    <circle cx="17" cy="19" r="4"/>
+                    <path d="M6 32l10-8 8 6 6-5 12 9" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )
+              },
+              {
+                num: "04",
+                title: "Campaign Execution",
+                desc: "Launching and managing digital advertising and marketing campaigns.",
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M8 24L24 8l16 16" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M24 8v32" strokeLinecap="round"/>
+                    <ellipse cx="24" cy="38" rx="12" ry="3" opacity="0.4"/>
+                    <path d="M16 30l-6 4M32 30l6 4" strokeLinecap="round" opacity="0.6"/>
+                  </svg>
+                )
+              },
+              {
+                num: "05",
+                title: "Performance Optimization",
+                desc: "Tracking analytics and continuously improving campaign performance.",
+                icon: (
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <polyline points="6,36 16,24 24,30 34,14 42,20" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="16" cy="24" r="2.5" fill="currentColor" stroke="none"/>
+                    <circle cx="24" cy="30" r="2.5" fill="currentColor" stroke="none"/>
+                    <circle cx="34" cy="14" r="2.5" fill="currentColor" stroke="none"/>
+                    <path d="M38 8v8h-8" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )
+              }
+            ].map((step, index) => (
+              <motion.div
+                key={index}
+                className="dm-process-step"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: index * 0.15 }}
+              >
+                <div className={`dm-step-card ${index % 2 === 0 ? 'dm-step-up' : 'dm-step-down'}`}>
+                  <div className="dm-step-glow"></div>
+                  <div className="dm-step-icon-wrap">
+                    {step.icon}
+                  </div>
+                  <div className="dm-step-num">{step.num}</div>
+                  <h3 className="dm-step-title">{step.title}</h3>
+                  <p className="dm-step-desc">{step.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };

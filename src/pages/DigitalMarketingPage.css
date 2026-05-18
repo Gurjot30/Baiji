@@ -709,3 +709,307 @@
     white-space: normal;
   }
 }
+
+/* ==============================
+   OUR DIGITAL MARKETING PROCESS
+   ============================== */
+.dm-process-section {
+  position: relative;
+  padding: 140px 0 160px 0;
+  background: #050505;
+  overflow: hidden;
+}
+
+.dm-process-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.dm-process-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.dm-process-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 50px;
+  background: rgba(212, 175, 55, 0.04);
+}
+
+.dm-process-header h2 {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+/* --- FLOW LAYOUT --- */
+.dm-process-flow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  padding: 80px 0;
+}
+
+/* The horizontal glowing spine line */
+.dm-process-flow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(212, 175, 55, 0.6) 10%,
+    var(--accent-color) 50%,
+    rgba(212, 175, 55, 0.6) 90%,
+    transparent 100%
+  );
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4), 0 0 40px rgba(212, 175, 55, 0.15);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* --- EACH STEP --- */
+.dm-process-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Connector dot on the spine */
+.dm-process-connector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.dm-connector-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2), 0 0 20px rgba(212, 175, 55, 0.6);
+  animation: dmPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes dmPulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2), 0 0 20px rgba(212, 175, 55, 0.5); }
+  50% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0.05), 0 0 40px rgba(212, 175, 55, 0.8); }
+}
+
+/* --- STEP CARD --- */
+.dm-step-card {
+  background: rgba(15, 15, 15, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  width: 90%;
+  max-width: 200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+/* Alternating UP/DOWN positioning to create wave effect */
+.dm-step-up {
+  margin-top: 0;
+  margin-bottom: 240px; /* pushes up above the spine */
+}
+
+.dm-step-down {
+  margin-top: 240px; /* pushes down below the spine */
+  margin-bottom: 0;
+}
+
+.dm-step-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.dm-step-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.dm-step-card:hover .dm-step-glow {
+  opacity: 1;
+}
+
+/* Icon */
+.dm-step-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem auto;
+  color: var(--accent-color);
+  transition: all 0.4s ease;
+}
+
+.dm-step-icon-wrap svg {
+  width: 30px;
+  height: 30px;
+}
+
+.dm-step-card:hover .dm-step-icon-wrap {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.dm-step-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 2px;
+  margin-bottom: 0.6rem;
+  opacity: 0.7;
+}
+
+.dm-step-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+.dm-step-desc {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #999;
+  font-weight: 300;
+}
+
+/* Vertical line from card to spine */
+.dm-step-up::after,
+.dm-step-down::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(212, 175, 55, 0.5), transparent);
+  transform: translateX(-50%);
+}
+
+.dm-step-up::after {
+  bottom: -80px;
+  height: 80px;
+}
+
+.dm-step-down::before {
+  top: -80px;
+  height: 80px;
+  background: linear-gradient(to top, rgba(212, 175, 55, 0.5), transparent);
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1100px) {
+  .dm-process-flow {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  /* Hide horizontal spine on mobile */
+  .dm-process-flow::before {
+    display: none;
+  }
+
+  .dm-process-connector {
+    display: none;
+  }
+
+  .dm-step-up,
+  .dm-step-down {
+    margin: 0;
+  }
+
+  .dm-step-up::after,
+  .dm-step-down::before {
+    display: none;
+  }
+
+  .dm-step-card {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+
+  .dm-step-icon-wrap {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .dm-step-num {
+    margin-bottom: 0.3rem;
+  }
+
+  /* Vertical timeline line */
+  .dm-process-step:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(212,175,55,0.5), transparent);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .dm-step-card {
+    padding: 1.5rem;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dm-step-icon-wrap {
+    margin: 0 auto;
+  }
+}
