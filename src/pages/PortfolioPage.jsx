@@ -4,21 +4,54 @@ import CTA from '../components/CTA';
 import './PortfolioPage.css';
 
 const portfolioData = [
-  { id: 1, title: "Midnight Drive", category: "Films", image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800" },
-  { id: 2, title: "Neon Nights", category: "Digital", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" },
-  { id: 4, title: "Urban Magazine", category: "Print", image: "https://images.unsplash.com/photo-1572483861298-6bb79f22e84c?auto=format&fit=crop&q=80&w=800" },
-  { id: 5, title: "Brand Anthem", category: "Films", image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&q=80&w=800" },
-  { id: 7, title: "Social Campaign", category: "Digital", image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800" },
-  { id: 8, title: "Annual Report", category: "Print", image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800" },
-  { id: 9, title: "Cinematic Trailer", category: "Films", image: "https://images.unsplash.com/photo-1579961139417-380eb9a5530d?auto=format&fit=crop&q=80&w=800" },
-  { id: 10, title: "Web App UI", category: "Digital", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" },
-  { id: 12, title: "Editorial Spread", category: "Print", image: "https://images.unsplash.com/photo-1621087816694-a3f81e8c0576?auto=format&fit=crop&q=80&w=800" },
-  { id: 13, title: "Documentary Short", category: "Films", image: "https://images.unsplash.com/photo-1518131672697-613becd4fab5?auto=format&fit=crop&q=80&w=800" },
-  { id: 14, title: "Interactive 3D", category: "Digital", image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" },
-  { id: 16, title: "Brand Identity Book", category: "Print", image: "https://images.unsplash.com/photo-1544605988-c71123cbac2d?auto=format&fit=crop&q=80&w=800" },
+  // Interleaved / Mixed Showcase (Film and Co-Branding mixed for a dynamic grid)
+  { id: 1, title: "Jolly LLB 2", category: "Film & Entertainment", image: "/film-jollyllb2.png" },
+  { id: 101, title: "Haldiram's Integration", category: "Co-Branding", image: "/haldirams.png" },
+  { id: 2, title: "Krrish 3", category: "Film & Entertainment", image: "/film-krrish3.png" },
+  { id: 102, title: "Dominos Brand Campaign", category: "Co-Branding", image: "/dominos-transparent.png" },
+  { id: 3, title: "Munna Michael", category: "Film & Entertainment", image: "/film-munnamichael.png" },
+  { id: 104, title: "Quick Heal Security Drive", category: "Co-Branding", image: "/quickheal.png" },
+  { id: 4, title: "Zero", category: "Film & Entertainment", image: "/film-zero.png" },
+  { id: 105, title: "Sujata Appliances Campaign", category: "Co-Branding", image: "/sujata.png" },
+  { id: 5, title: "Sultan", category: "Film & Entertainment", image: "/film-sultan.png" },
+  { id: 106, title: "Magic Moments Collaborations", category: "Co-Branding", image: "/magic-moments.png" },
+  { id: 6, title: "Bhooth Bangla", category: "Film & Entertainment", image: "/film-bhooth-bangla.jpg" },
+  { id: 107, title: "SRMB TMT Structural Drive", category: "Co-Branding", image: "/srmb-tmt.png" },
+  { id: 7, title: "Baaghi 4", category: "Film & Entertainment", image: "/film-baaghi4.png" },
+  { id: 108, title: "Redcliffe Labs Health Campaign", category: "Co-Branding", image: "/redcliffe.png" },
+  { id: 8, title: "Thamma", category: "Film & Entertainment", image: "/film-thamma.png" },
+  { id: 109, title: "Star 555 Detergent Launch", category: "Co-Branding", image: "/star555.png" },
+  { id: 9, title: "Pati Patni Aur Woh 2", category: "Film & Entertainment", image: "/film-husbandbiwi.png" },
+  { id: 110, title: "JK Masale Campaign", category: "Co-Branding", image: "/jk-masale-campaign.png" },
+  { id: 10, title: "Ground Zero", category: "Film & Entertainment", image: "/film-groundzero.png" },
+  { id: 111, title: "Dev Bhoomi Uttarakhand University", category: "Co-Branding", image: "/brand-devbhoomi.png" },
+  { id: 112, title: "Harrison Locks Campaign", category: "Co-Branding", image: "/brand-harrison.png" },
+  { id: 11, title: "Maidaan", category: "Film & Entertainment", image: "/film-maidaan.png" },
+  { id: 113, title: "Rasna Orange Campaign", category: "Co-Branding", image: "/brand-rasnaorange.png" },
+  { id: 12, title: "Dream Girl 2", category: "Film & Entertainment", image: "/film-dreamgirl2-hq.jpg" },
+  { id: 114, title: "Kuber Brand Campaign", category: "Co-Branding", image: "/brand-kuber.png" },
+  { id: 13, title: "Mr. & Mrs. Mahi", category: "Film & Entertainment", image: "/film-mrmrsmahi.jpg" },
+  { id: 115, title: "Essdee Partnership", category: "Co-Branding", image: "/brand-essdee.png" },
+  { id: 14, title: "Crew", category: "Film & Entertainment", image: "/film-crew.jpg" },
+  { id: 116, title: "Belani Builds Better", category: "Co-Branding", image: "/brand-belani.png" },
+  { id: 15, title: "Bitterless Relations", category: "Film & Entertainment", image: "/film-bitterless.jpg" },
+  { id: 117, title: "Sanat Products Ltd", category: "Co-Branding", image: "/brand-sanat.png" },
+  { id: 16, title: "Singham Again", category: "Film & Entertainment", image: "/film-singhamagain2.jpg" },
+  { id: 118, title: "Orientbell Tiles", category: "Co-Branding", image: "/brand-orientbell.png" },
+  { id: 17, title: "Fateh", category: "Film & Entertainment", image: "/film-fateh.jpg" },
+  { id: 119, title: "Jivi Mobiles Campaign", category: "Co-Branding", image: "/jivi.png" },
+  { id: 18, title: "Ruslaan", category: "Film & Entertainment", image: "/film-ruslaan.jpg" },
+  { id: 19, title: "Crakk", category: "Film & Entertainment", image: "/film-crakk.jpg" },
+  { id: 20, title: "Main Atal Hoon", category: "Film & Entertainment", image: "/film-mainatalhoon.jpg" },
+  { id: 21, title: "Ganapath", category: "Film & Entertainment", image: "/film-ganapath.jpg" },
+  { id: 22, title: "Dunki", category: "Film & Entertainment", image: "/film-dunki.jpg" },
+  { id: 23, title: "Akelli", category: "Film & Entertainment", image: "/film-akelli.jpg" },
+  { id: 24, title: "Fukrey 3", category: "Film & Entertainment", image: "/film-fukrey3.jpg" },
+  { id: 25, title: "Pathaan", category: "Film & Entertainment", image: "/film-pathaan.jpg" },
+  { id: 120, title: "Ascentia Campaign", category: "Co-Branding", image: "/brand-ascentia.png" }
 ];
 
-const categories = ["All", "Films", "Digital", "Print"];
+const categories = ["All", "Film & Entertainment", "Co-Branding"];
 
 const PortfolioPage = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -27,31 +60,57 @@ const PortfolioPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Fisher-Yates stable session randomizer (Shuffled once per page load to avoid jumpy cards on filter switch)
+  const randomizedPortfolio = React.useMemo(() => {
+    const list = [...portfolioData];
+    for (let i = list.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [list[i], list[j]] = [list[j], list[i]];
+    }
+    return list;
+  }, []);
+
   const filteredProjects = activeFilter === "All" 
-    ? portfolioData 
-    : portfolioData.filter(project => project.category === activeFilter);
+    ? randomizedPortfolio 
+    : randomizedPortfolio.filter(project => project.category === activeFilter);
 
   return (
     <div className="portfolio-page">
-      <section className="portfolio-header">
+      {/* Hero Section */}
+      <section className="portfolio-hero">
+        <div className="portfolio-hero-bg">
+          <div className="portfolio-glow-orb portfolio-orb-1"></div>
+          <div className="portfolio-glow-orb portfolio-orb-2"></div>
+        </div>
+        
+        <div className="portfolio-marquee">
+          <div className="portfolio-marquee-content">
+            <span>PORTFOLIO</span><span className="dot">•</span>
+            <span className="outline">EXHIBITION</span><span className="dot">•</span>
+            <span>LEGACY</span><span className="dot">•</span>
+            <span className="outline">CREATIVE</span><span className="dot">•</span>
+            <span>SHOWCASE</span><span className="dot">•</span>
+            <span className="outline">PORTFOLIO</span><span className="dot">•</span>
+            <span>EXHIBITION</span><span className="dot">•</span>
+            <span className="outline">LEGACY</span><span className="dot">•</span>
+            <span>CREATIVE</span><span className="dot">•</span>
+            <span className="outline">SHOWCASE</span><span className="dot">•</span>
+          </div>
+        </div>
+
         <div className="container">
-          <motion.h1 
-            className="heading-xl"
-            initial={{ opacity: 0, y: -20 }}
+          <motion.div 
+            className="portfolio-hero-content"
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            Our <span className="text-accent">Portfolio</span>
-          </motion.h1>
-          <motion.p 
-            className="portfolio-subtitle"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            A curated selection of our finest work across multiple disciplines. 
-            Witness how we bring brands to life.
-          </motion.p>
+            <h1 className="portfolio-title">
+              A Legacy Of<br />
+              <span className="text-accent">Creative</span><br />
+              <span className="text-outline">Excellence.</span>
+            </h1>
+          </motion.div>
         </div>
       </section>
 

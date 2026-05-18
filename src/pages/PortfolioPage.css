@@ -3,19 +3,136 @@
   min-height: 100vh;
 }
 
-.portfolio-header {
-  padding-top: 150px;
-  padding-bottom: 80px;
-  background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-color) 100%);
-  text-align: center;
+.portfolio-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 100px;
 }
 
-.portfolio-subtitle {
-  color: #ccc;
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 1.5rem auto 0;
+.portfolio-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(20, 20, 20, 1) 0%, rgba(5, 5, 5, 1) 100%);
+}
+
+.portfolio-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.portfolio-orb-1 {
+  width: 600px;
+  height: 600px;
+  background: var(--accent-color);
+  top: -200px;
+  right: -100px;
+  animation: portfolioFloat 10s ease-in-out infinite alternate;
+}
+
+.portfolio-orb-2 {
+  width: 500px;
+  height: 500px;
+  background: #333;
+  bottom: -100px;
+  left: -200px;
+  animation: portfolioFloat 12s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes portfolioFloat {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(50px) scale(1.1); }
+}
+
+.portfolio-marquee {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0.05;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.portfolio-marquee-content {
+  display: inline-block;
+  animation: portfolioMarquee 40s linear infinite;
+  font-size: 15vw;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.portfolio-marquee-content span {
+  padding: 0 2rem;
+}
+
+.portfolio-marquee-content .outline {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+
+.portfolio-marquee-content .dot {
+  color: var(--accent-color);
+  font-size: 8vw;
+  vertical-align: middle;
+}
+
+@keyframes portfolioMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.portfolio-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  text-align: left;
+  padding: 0 2rem;
+}
+
+.portfolio-title {
+  font-size: clamp(3.5rem, 8.5vw, 7.8rem);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.portfolio-title .text-accent {
+  color: var(--accent-color);
+  text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+}
+
+.portfolio-title .text-outline {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+
+.portfolio-hero-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 650px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.portfolio-gallery-section {
+  padding-top: 80px;
 }
 
 .portfolio-filter-container {
@@ -54,8 +171,8 @@
 
 .portfolio-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.8rem;
   padding-bottom: 100px;
 }
 
@@ -63,20 +180,32 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/4;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+  background: #080808;
+  border: 1px solid rgba(212, 175, 55, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.portfolio-gallery-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 20px rgba(212, 175, 55, 0.1);
 }
 
 .portfolio-gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .portfolio-gallery-item:hover img {
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 
 .portfolio-item-overlay {
@@ -120,8 +249,8 @@
 
 @media (max-width: 768px) {
   .portfolio-gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.2rem;
   }
   
   .portfolio-item-overlay {

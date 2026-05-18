@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import './Hero.css';
@@ -76,7 +77,7 @@ const Hero = () => {
             </h1>
             
             <div className="hero-cta">
-              <a href="#contact" className="btn btn-primary">Work With Us</a>
+              <Link to="/contact" className="btn btn-primary">Work With Us</Link>
             </div>
           </motion.div>
         </AnimatePresence>

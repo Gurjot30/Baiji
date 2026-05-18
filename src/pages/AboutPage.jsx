@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Director from '../components/Director';
 import Team from '../components/Team';
+import CTA from '../components/CTA';
 import { motion } from 'framer-motion';
 import './AboutPage.css';
 
@@ -119,6 +120,7 @@ const AboutPage = () => {
       
       <Director />
       <Team />
+      <CTA />
     </div>
   );
 };

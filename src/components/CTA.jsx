@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './CTA.css';
 
@@ -15,7 +16,7 @@ const CTA = () => {
         >
           <h2 className="heading-lg">Let's Build Your Brand <span className="text-accent">Together</span></h2>
           <p className="cta-subtitle">Ready to take the next step in brand evolution?</p>
-          <a href="#contact" className="btn btn-primary cta-btn">Get In Touch</a>
+          <Link to="/contact" className="btn btn-primary cta-btn">Get In Touch</Link>
         </motion.div>
       </div>
     </section>

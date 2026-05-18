@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './ProductionEntertainmentPage.css';
 
@@ -289,6 +290,34 @@ const ProductionEntertainmentPage = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Cinematic CTA Section */}
+      <section className="pe-cta-section">
+        <div className="pe-cta-bg">
+          <div className="pe-cta-glow"></div>
+        </div>
+        <div className="container relative-z">
+          <motion.div 
+            className="pe-cta-box"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="pe-cta-title">
+              Let's Co-Create Your <br/>
+              <span className="text-accent">Next Cinematic Masterpiece</span>
+            </h2>
+            <p className="pe-cta-desc">
+              Whether it's a stellar ad commercial, brand video, motion graphics or film promotions, we turn raw concepts into premium auditory and visual experiences.
+            </p>
+            <div className="pe-cta-actions">
+              <Link to="/contact" className="pe-cta-btn btn-primary">Start Your Production</Link>
+              <Link to="/portfolio" className="pe-cta-btn btn-secondary">See Our Portfolio</Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 

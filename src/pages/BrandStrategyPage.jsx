@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './BrandStrategyPage.css';
 
@@ -292,6 +293,34 @@ const BrandStrategyPage = () => {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Elegant CTA Section */}
+      <section className="bs-cta-section">
+        <div className="bs-cta-bg">
+          <div className="bs-cta-glow"></div>
+        </div>
+        <div className="container">
+          <motion.div 
+            className="bs-cta-box"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="bs-cta-title">
+              Ready to Give Your Brand <br/>
+              <span className="text-accent">A Stronger Voice?</span>
+            </h2>
+            <p className="bs-cta-desc">
+              Let's craft a strategic framework that elevates your identity and connects deeply with your audience.
+            </p>
+            <div className="bs-cta-actions">
+              <Link to="/contact" className="bs-cta-btn btn-primary">Start Your Strategy</Link>
+              <Link to="/portfolio" className="bs-cta-btn btn-secondary">Explore Our Work</Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 

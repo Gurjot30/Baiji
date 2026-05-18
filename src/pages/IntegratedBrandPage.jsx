@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './IntegratedBrandPage.css';
 
@@ -518,6 +519,34 @@ const IntegratedBrandPage = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Integrated CTA Section */}
+      <section className="ib-cta-section">
+        <div className="ib-cta-bg">
+          <div className="ib-cta-glow"></div>
+        </div>
+        <div className="container relative-z">
+          <motion.div 
+            className="ib-cta-box"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="ib-cta-title">
+              Ready for a Unified <br/>
+              <span className="text-accent">Brand Communication Strategy?</span>
+            </h2>
+            <p className="ib-cta-desc">
+              Let us bring strategy, creativity, production, digital marketing, media planning and celebrity management together under one unified high-impact approach.
+            </p>
+            <div className="ib-cta-actions">
+              <Link to="/contact" className="ib-cta-btn btn-primary">Start Your Partnership</Link>
+              <Link to="/portfolio" className="ib-cta-btn btn-secondary">View Our Portfolio</Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 

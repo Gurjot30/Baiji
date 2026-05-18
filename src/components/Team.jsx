@@ -38,6 +38,16 @@ const teamData = [
       "His work sits at the intersection of ideas and execution, where narratives are not just written but shaped for the screen. Having worked across categories and formats, he brings a deep understanding of how stories translate into films.",
       "His approach is rooted in human insight, cultural nuance, and emotional clarity—creating work that feels simple, honest, and memorable."
     ]
+  },
+  {
+    id: 4,
+    name: "Leena Sharma",
+    headline: "Digital Marketer",
+    image: "/team-leena.jpg",
+    bio: [
+      "Leena Sharma is a passionate and result-driven Digital Marketing Specialist with 8+ years of experience in creating impactful digital strategies and brand communication solutions. With expertise in social media marketing, branding, performance marketing, and audience engagement, she has successfully helped brands strengthen their online presence and achieve measurable growth.",
+      "At Baiji Entertainments, she plays a key role in developing creative digital campaigns, managing brand communication, and building strong audience connections through innovative marketing strategies. Her approach combines creativity, market understanding, and performance-focused execution to deliver impactful digital experiences for brands across multiple industries."
+    ]
   }
 ];
 

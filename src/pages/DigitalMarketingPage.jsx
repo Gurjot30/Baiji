@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import './DigitalMarketingPage.css';
 
@@ -404,6 +405,34 @@ const DigitalMarketingPage = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Digital CTA Section */}
+      <section className="dm-cta-section">
+        <div className="dm-cta-bg">
+          <div className="dm-cta-glow"></div>
+        </div>
+        <div className="container relative-z">
+          <motion.div 
+            className="dm-cta-box"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="dm-cta-title">
+              Ready to Accelerate Your <br/>
+              <span className="text-accent">Digital Brand Growth?</span>
+            </h2>
+            <p className="dm-cta-desc">
+              Let's create high-performance social media marketing, paid advertising, and conversion-focused media campaigns that put your brand ahead.
+            </p>
+            <div className="dm-cta-actions">
+              <Link to="/contact" className="dm-cta-btn btn-primary">Start Your Campaign</Link>
+              <Link to="/portfolio" className="dm-cta-btn btn-secondary">Explore Case Studies</Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
