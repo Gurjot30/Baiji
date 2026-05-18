@@ -54,16 +54,17 @@
   gap: 2.5rem;
 }
 
-.nav-links a {
+.nav-links a, .dropdown-trigger {
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .dropdown-trigger:hover {
   color: var(--accent-color);
 }
 

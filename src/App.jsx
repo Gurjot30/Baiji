@@ -7,6 +7,9 @@ import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
+import BrandStrategyPage from './pages/BrandStrategyPage';
+import ProductionEntertainmentPage from './pages/ProductionEntertainmentPage';
+import DigitalMarketingPage from './pages/DigitalMarketingPage';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/services/brand-creative-strategy" element={<BrandStrategyPage />} />
+            <Route path="/services/production-entertainment" element={<ProductionEntertainmentPage />} />
+            <Route path="/services/digital-performance-marketing" element={<DigitalMarketingPage />} />
           </Routes>
         </main>
         <Footer />

@@ -29,7 +29,7 @@ const Navbar = () => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li className="dropdown-container">
-            <a href="/#services" className="dropdown-trigger">Services</a>
+            <span className="dropdown-trigger">Services</span>
             <ul className="dropdown-menu">
               <li><Link to="/services/brand-creative-strategy">Brand & Creative Strategy</Link></li>
               <li><Link to="/services/production-entertainment">Production & Entertainment</Link></li>
