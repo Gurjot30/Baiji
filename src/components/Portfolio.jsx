@@ -8,39 +8,60 @@ gsap.registerPlugin(ScrollTrigger);
 
 const portfolioData = {
   films: [
+    '/film-jollyllb2.png',
+    '/film-krrish3.png',
+    '/film-munnamichael.png',
     '/film-zero.png',
     '/film-sultan.png',
-    '/film-dreamgirl2.png',
     '/film-bhooth-bangla.jpg',
-    '/film-thamma.png',
     '/film-baaghi4.png',
-    '/film-groundzero.png',
+    '/film-thamma.png',
     '/film-husbandbiwi.png',
-    '/film-singhamagain.png',
+    '/film-groundzero.png',
     '/film-maidaan.png',
+    '/film-dreamgirl2-hq.jpg',
+    '/film-mrmrsmahi.jpg',
+    '/film-crew.jpg',
+    '/film-bitterless.jpg',
+    '/film-singhamagain2.jpg',
+    '/film-fateh.jpg',
+    '/film-ruslaan.jpg',
+    '/film-crakk.jpg',
+    '/film-mainatalhoon.jpg',
+    '/film-ganapath.jpg',
+    '/film-dunki.jpg',
+    '/film-akelli.jpg',
+    '/film-fukrey3.jpg',
+    '/film-pathaan.jpg'
   ],
   cobranding: [
     '/quickheal.png',
     '/star555.png',
     '/srmb-tmt.png',
-    '/aptech.png',
     '/laminex.png',
     '/dominos-transparent.png',
-    '/kethini.png',
     '/magic-moments.png',
-    '/harrison.png',
-    '/essdee.png',
-    '/kuber.png',
+    '/brand-harrison.png',
     '/oshea.png',
-    '/rasna.png',
-    '/ascentia.png',
     '/sujata.png',
     '/toptech.png',
-    '/railway.png',
     '/popular.png',
     '/redcliffe.png',
     '/sarvottam.png',
-    '/toptech-new.png'
+    '/toptech-new.png',
+    '/brand-gallantt.png',
+    '/brand-traya.png',
+    '/brand-jkmasale.png',
+    '/brand-birlahil.png',
+    '/brand-haldiramsnagpur.png',
+    '/brand-devbhoomi.png',
+    '/brand-belani.png',
+    '/brand-sanat.png',
+    '/brand-orientbell.png',
+    '/jivi.png',
+    '/brand-paras.png',
+    '/brand-prabhuji.png',
+    '/vikram-tea.png'
   ],
 };
 
@@ -101,7 +122,7 @@ const Portfolio = () => {
         {Object.entries(portfolioData).map(([category, images]) => (
           <div key={category} className="portfolio-category">
             <h3 className="category-title">
-              {category === 'films' ? 'Films' : 'Co Branding'}
+              {category === 'films' ? 'Films' : 'Branding'}
             </h3>
             <div className="slider-container">
               <div

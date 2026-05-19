@@ -6,7 +6,6 @@ import './PortfolioPage.css';
 const portfolioData = [
   // Interleaved / Mixed Showcase (Film and Co-Branding mixed for a dynamic grid)
   { id: 1, title: "Jolly LLB 2", category: "Film & Entertainment", image: "/film-jollyllb2.png" },
-  { id: 101, title: "Haldiram's Integration", category: "Co-Branding", image: "/haldirams.png" },
   { id: 2, title: "Krrish 3", category: "Film & Entertainment", image: "/film-krrish3.png" },
   { id: 102, title: "Dominos Brand Campaign", category: "Co-Branding", image: "/dominos-transparent.png" },
   { id: 3, title: "Munna Michael", category: "Film & Entertainment", image: "/film-munnamichael.png" },
@@ -22,16 +21,12 @@ const portfolioData = [
   { id: 8, title: "Thamma", category: "Film & Entertainment", image: "/film-thamma.png" },
   { id: 109, title: "Star 555 Detergent Launch", category: "Co-Branding", image: "/star555.png" },
   { id: 9, title: "Pati Patni Aur Woh 2", category: "Film & Entertainment", image: "/film-husbandbiwi.png" },
-  { id: 110, title: "JK Masale Campaign", category: "Co-Branding", image: "/jk-masale-campaign.png" },
   { id: 10, title: "Ground Zero", category: "Film & Entertainment", image: "/film-groundzero.png" },
   { id: 111, title: "Dev Bhoomi Uttarakhand University", category: "Co-Branding", image: "/brand-devbhoomi.png" },
   { id: 112, title: "Harrison Locks Campaign", category: "Co-Branding", image: "/brand-harrison.png" },
   { id: 11, title: "Maidaan", category: "Film & Entertainment", image: "/film-maidaan.png" },
-  { id: 113, title: "Rasna Orange Campaign", category: "Co-Branding", image: "/brand-rasnaorange.png" },
   { id: 12, title: "Dream Girl 2", category: "Film & Entertainment", image: "/film-dreamgirl2-hq.jpg" },
-  { id: 114, title: "Kuber Brand Campaign", category: "Co-Branding", image: "/brand-kuber.png" },
   { id: 13, title: "Mr. & Mrs. Mahi", category: "Film & Entertainment", image: "/film-mrmrsmahi.jpg" },
-  { id: 115, title: "Essdee Partnership", category: "Co-Branding", image: "/brand-essdee.png" },
   { id: 14, title: "Crew", category: "Film & Entertainment", image: "/film-crew.jpg" },
   { id: 116, title: "Belani Builds Better", category: "Co-Branding", image: "/brand-belani.png" },
   { id: 15, title: "Bitterless Relations", category: "Film & Entertainment", image: "/film-bitterless.jpg" },
@@ -48,7 +43,20 @@ const portfolioData = [
   { id: 23, title: "Akelli", category: "Film & Entertainment", image: "/film-akelli.jpg" },
   { id: 24, title: "Fukrey 3", category: "Film & Entertainment", image: "/film-fukrey3.jpg" },
   { id: 25, title: "Pathaan", category: "Film & Entertainment", image: "/film-pathaan.jpg" },
-  { id: 120, title: "Ascentia Campaign", category: "Co-Branding", image: "/brand-ascentia.png" }
+  { id: 121, title: "Gallantt Advance", category: "Co-Branding", image: "/brand-gallantt.png" },
+  { id: 122, title: "Traya Campaign", category: "Co-Branding", image: "/brand-traya.png" },
+  { id: 123, title: "JK Masale Campaign", category: "Co-Branding", image: "/brand-jkmasale.png" },
+  { id: 124, title: "Birla HIL Pipes", category: "Co-Branding", image: "/brand-birlahil.png" },
+  { id: 125, title: "Haldiram's Nagpur", category: "Co-Branding", image: "/brand-haldiramsnagpur.png" },
+  { id: 126, title: "Laminex Surfaces", category: "Co-Branding", image: "/laminex.png" },
+  { id: 127, title: "O'Shea Herbals", category: "Co-Branding", image: "/oshea.png" },
+  { id: 128, title: "Toptech Steel Campaign", category: "Co-Branding", image: "/toptech.png" },
+  { id: 129, title: "Popular Automobiles", category: "Co-Branding", image: "/popular.png" },
+  { id: 130, title: "Sarvottam Brand Drive", category: "Co-Branding", image: "/sarvottam.png" },
+  { id: 131, title: "Toptech TMT Launch", category: "Co-Branding", image: "/toptech-new.png" },
+  { id: 132, title: "Paras Pipes & Tank", category: "Co-Branding", image: "/brand-paras.png" },
+  { id: 133, title: "Prabhuji Pure Food", category: "Co-Branding", image: "/brand-prabhuji.png" },
+  { id: 134, title: "Vikram Tea Campaign", category: "Co-Branding", image: "/vikram-tea.png" }
 ];
 
 const categories = ["All", "Film & Entertainment", "Co-Branding"];

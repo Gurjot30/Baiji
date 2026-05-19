@@ -4,29 +4,15 @@ import './Team.css';
 
 const teamData = [
   {
-    id: 1,
-    name: "Ujjaval Kunwar",
-    headline: "DOP • Editor • Visual Content Producer",
-    image: "/ujjaval.png",
-    bio: [
-      "Ujjaval didn’t build his journey around just one role—and that layered experience defines his work.",
-      "With hands-on experience across direction of photography, editing, and over 9 years in VFX & post-production—spanning Bollywood, Hollywood projects, mega events, and Broadway-style shows—he has been closely involved in every stage of content creation. From shaping an idea to refining its final output, he understands not just how content is made, but how it should look, feel, and perform.",
-      "His visual style leans towards clean, cinematic storytelling, with a focus on detail, rhythm, and audience connection.",
-      "As a creator, he values balance. Between creativity and clarity. Between aesthetics and impact.",
-      "Because the most effective content is not just seen—it stays."
-    ]
-  },
-  {
     id: 2,
-    name: "Aadarsh Kunwar",
-    headline: "Creative Producer",
-    image: "/member2.jpg",
+    name: "Megha Sharma",
+    headline: "Business Development Head",
+    image: "/megha.jpg",
     bio: [
-      "Creative Producer with hands on experience across multiple projects in the media and content industry, specializing in turning ideas into compelling visual stories.",
-      "Skilled in managing end to end production, from concept development and planning to execution and final delivery. Experienced in coordinating with creative teams, clients, and production partners to ensure seamless project flow.",
-      "Strong understanding of visual storytelling, branding, and audience engagement across digital platforms. Passionate about creating impactful content that balances creativity with strategy.",
-      "Known for delivering high quality productions while maintaining timelines and production efficiency."
-    ]
+      "Megha Sharma is a Business Development Head with years of experience in the advertising industry.",
+      "Her work blends strategy and relationships, turning ideas into strong brand partnerships. She focuses on delivering clear, effective solutions that drive growth and lasting value."
+    ],
+    highlight: true
   },
   {
     id: 3,
@@ -41,6 +27,31 @@ const teamData = [
   },
   {
     id: 4,
+    name: "Ujjaval Kunwar",
+    headline: "DOP • Editor • Visual Content Producer",
+    image: "/ujjaval.png",
+    bio: [
+      "Ujjaval didn’t build his journey around just one role—and that layered experience defines his work.",
+      "With hands-on experience across direction of photography, editing, and over 9 years in VFX & post-production—spanning Bollywood, Hollywood projects, mega events, and Broadway-style shows—he has been closely involved in every stage of content creation. From shaping an idea to refining its final output, he understands not just how content is made, but how it should look, feel, and perform.",
+      "His visual style leans towards clean, cinematic storytelling, with a focus on detail, rhythm, and audience connection.",
+      "As a creator, he values balance. Between creativity and clarity. Between aesthetics and impact.",
+      "Because the most effective content is not just seen—it stays."
+    ]
+  },
+  {
+    id: 5,
+    name: "Aadarsh Kunwar",
+    headline: "Creative Producer",
+    image: "/member2.jpg",
+    bio: [
+      "Creative Producer with hands on experience across multiple projects in the media and content industry, specializing in turning ideas into compelling visual stories.",
+      "Skilled in managing end to end production, from concept development and planning to execution and final delivery. Experienced in coordinating with creative teams, clients, and production partners to ensure seamless project flow.",
+      "Strong understanding of visual storytelling, branding, and audience engagement across digital platforms. Passionate about creating impactful content that balances creativity with strategy.",
+      "Known for delivering high quality productions while maintaining timelines and production efficiency."
+    ]
+  },
+  {
+    id: 6,
     name: "Leena Sharma",
     headline: "Digital Marketer",
     image: "/team-leena.jpg",
@@ -88,6 +99,11 @@ const Team = () => {
                 </div>
                 
                 <div className="team-bio-wrapper">
+                  {activeMember.highlight && (
+                    <div className="partner-highlight-badge">
+                      <span className="sparkle-icon">✨</span> KEY PARTNER & STRATEGIST
+                    </div>
+                  )}
                   <h3 className="team-name">{activeMember.name}</h3>
                   <p className="team-headline text-accent">{activeMember.headline}</p>
                   
@@ -106,7 +122,7 @@ const Team = () => {
             {teamData.map((member, index) => (
               <motion.div 
                 key={member.id}
-                className={`team-selector-item ${activeIndex === index ? 'active' : ''}`}
+                className={`team-selector-item ${activeIndex === index ? 'active' : ''} ${member.highlight ? 'highlighted-selector' : ''}`}
                 onClick={() => setActiveIndex(index)}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -117,6 +133,9 @@ const Team = () => {
                 <div className="team-selector-info">
                   <h4>{member.name}</h4>
                   <span className="text-accent">{member.headline.split('•')[0].trim()}</span>
+                  {member.highlight && (
+                    <span className="mini-partner-label">Key Partner</span>
+                  )}
                 </div>
               </motion.div>
             ))}
