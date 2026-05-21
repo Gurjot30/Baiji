@@ -1,7 +1,7 @@
 .process-reference-section {
   width: 100%;
   overflow: hidden;
-  background: #ffffff;
+  background: transparent;
   line-height: 0;
 }
 
@@ -9,7 +9,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #ffffff;
+  background: transparent;
   animation: processArtReveal 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
