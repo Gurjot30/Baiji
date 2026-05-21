@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiMail, FiPhone, FiInstagram, FiLinkedin, FiFacebook, FiYoutube, FiMapPin } from 'react-icons/fi';
 import './Footer.css';
@@ -60,9 +59,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Baiji Entertainments. All rights reserved.</p>
-        </div>
+
       </div>
     </footer>
   );
