@@ -28,13 +28,9 @@ const portfolioData = [
   { id: 12, title: "Dream Girl 2", category: "Film & Entertainment", image: "/film-dreamgirl2-hq.jpg" },
   { id: 13, title: "Mr. & Mrs. Mahi", category: "Film & Entertainment", image: "/film-mrmrsmahi.jpg" },
   { id: 14, title: "Crew", category: "Film & Entertainment", image: "/film-crew.jpg" },
-  { id: 116, title: "Belani Builds Better", category: "Co-Branding", image: "/brand-belani.png" },
   { id: 15, title: "Bitterless Relations", category: "Film & Entertainment", image: "/film-bitterless.jpg" },
-  { id: 117, title: "Sanat Products Ltd", category: "Co-Branding", image: "/brand-sanat.png" },
   { id: 16, title: "Singham Again", category: "Film & Entertainment", image: "/film-singhamagain2.jpg" },
-  { id: 118, title: "Orientbell Tiles", category: "Co-Branding", image: "/brand-orientbell.png" },
   { id: 17, title: "Fateh", category: "Film & Entertainment", image: "/film-fateh.jpg" },
-  { id: 119, title: "Jivi Mobiles Campaign", category: "Co-Branding", image: "/jivi.png" },
   { id: 18, title: "Ruslaan", category: "Film & Entertainment", image: "/film-ruslaan.jpg" },
   { id: 19, title: "Crakk", category: "Film & Entertainment", image: "/film-crakk.jpg" },
   { id: 20, title: "Main Atal Hoon", category: "Film & Entertainment", image: "/film-mainatalhoon.jpg" },
@@ -55,7 +51,6 @@ const portfolioData = [
   { id: 130, title: "Sarvottam Brand Drive", category: "Co-Branding", image: "/sarvottam.png" },
   { id: 131, title: "Toptech TMT Launch", category: "Co-Branding", image: "/toptech-new.png" },
   { id: 132, title: "Paras Pipes & Tank", category: "Co-Branding", image: "/brand-paras.png" },
-  { id: 133, title: "Prabhuji Pure Food", category: "Co-Branding", image: "/brand-prabhuji.png" },
   { id: 134, title: "Vikram Tea Campaign", category: "Co-Branding", image: "/vikram-tea.png" }
 ];
 

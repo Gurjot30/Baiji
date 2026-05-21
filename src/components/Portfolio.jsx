@@ -55,12 +55,7 @@ const portfolioData = {
     '/brand-birlahil.png',
     '/brand-haldiramsnagpur.png',
     '/brand-devbhoomi.png',
-    '/brand-belani.png',
-    '/brand-sanat.png',
-    '/brand-orientbell.png',
-    '/jivi.png',
     '/brand-paras.png',
-    '/brand-prabhuji.png',
     '/vikram-tea.png'
   ],
 };
