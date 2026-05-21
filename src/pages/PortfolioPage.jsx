@@ -46,10 +46,8 @@ const portfolioData = [
   { id: 125, title: "Haldiram's Nagpur", category: "Co-Branding", image: "/brand-haldiramsnagpur.png" },
   { id: 126, title: "Laminex Surfaces", category: "Co-Branding", image: "/laminex.png" },
   { id: 127, title: "O'Shea Herbals", category: "Co-Branding", image: "/oshea.png" },
-  { id: 128, title: "Toptech Steel Campaign", category: "Co-Branding", image: "/toptech.png" },
   { id: 129, title: "Popular Automobiles", category: "Co-Branding", image: "/popular.png" },
   { id: 130, title: "Sarvottam Brand Drive", category: "Co-Branding", image: "/sarvottam.png" },
-  { id: 131, title: "Toptech TMT Launch", category: "Co-Branding", image: "/toptech-new.png" },
   { id: 132, title: "Paras Pipes & Tank", category: "Co-Branding", image: "/brand-paras.png" },
   { id: 134, title: "Vikram Tea Campaign", category: "Co-Branding", image: "/vikram-tea.png" }
 ];
