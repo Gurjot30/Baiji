@@ -1,36 +1,69 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Phone, Mail, ChevronDown, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import './ContactPage.css';
 
-const faqs = [
-  {
-    question: "What industries do you specialize in?",
-    answer: "We specialize in the entertainment and sports sectors, offering creative strategy, film production, digital marketing, and celebrity management. However, our 3C model is highly adaptable and has successfully elevated brands across FMCG, tech, and lifestyle categories."
-  },
-  {
-    question: "How long does a typical campaign take from concept to execution?",
-    answer: "Timelines vary greatly depending on the scope of the project. A digital-only campaign might take 4-6 weeks to launch, while a full-scale cinematic film production and national rollout could take 3-6 months. We prioritize quality while adhering to agreed-upon deadlines."
-  },
-  {
-    question: "Do you handle celebrity endorsements?",
-    answer: "Yes, Celebrity Management is one of our core pillars. We have strong industry relationships and handle everything from talent sourcing and negotiation to contract management and on-set coordination."
-  },
-  {
-    question: "Where are your offices located?",
-    answer: "We have registered offices and operations based in the heart of the Indian entertainment industry: Delhi and Mumbai. This dual presence allows us to tap into the best creative and production talent in the country."
-  }
-];
-
 const ContactPage = () => {
-  const [activeFaq, setActiveFaq] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+  const [submitMessage, setSubmitMessage] = useState('');
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const toggleFaq = (index) => {
-    setActiveFaq(activeFaq === index ? null : index);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/divyanshu@baijientertainments.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          Name: formData.name,
+          Email: formData.email,
+          Subject: formData.subject,
+          Message: formData.message,
+          _subject: `New enquiry from Baiji website: ${formData.subject || 'General Info'}`
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success === "true") {
+        setSubmitStatus('success');
+        setSubmitMessage("Thank you! Your enquiry details have been successfully submitted.");
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error(result.message || "Failed to submit form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setSubmitStatus('error');
+      setSubmitMessage(error.message || "Something went wrong while sending your request. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -105,26 +138,86 @@ const ContactPage = () => {
               <h2>Send a Message</h2>
               <p>Our dedicated team is ready to listen, strategize, and bring your brand vision to life.</p>
             </div>
+
+            <AnimatePresence mode="wait">
+              {submitStatus && (
+                <motion.div
+                  className={`cp-alert-banner ${submitStatus}`}
+                  initial={{ opacity: 0, height: 0, y: -20 }}
+                  animate={{ opacity: 1, height: 'auto', y: 0 }}
+                  exit={{ opacity: 0, height: 0, y: -20 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                >
+                  <div className="cp-alert-content">
+                    {submitStatus === 'success' ? (
+                      <CheckCircle2 className="cp-alert-icon" size={20} />
+                    ) : (
+                      <AlertCircle className="cp-alert-icon" size={20} />
+                    )}
+                    <span>{submitMessage}</span>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
             
-            <form className="cp-form" onSubmit={(e) => e.preventDefault()}>
+            <form className="cp-form" onSubmit={handleSubmit}>
               <div className="cp-input-group">
-                <input type="text" className="cp-input" required />
+                <input 
+                  type="text" 
+                  name="name"
+                  className="cp-input" 
+                  value={formData.name}
+                  onChange={handleChange}
+                  required 
+                />
                 <label className="cp-label">Your Name</label>
               </div>
               <div className="cp-input-group">
-                <input type="email" className="cp-input" required />
+                <input 
+                  type="email" 
+                  name="email"
+                  className="cp-input" 
+                  value={formData.email}
+                  onChange={handleChange}
+                  required 
+                />
                 <label className="cp-label">Your Email</label>
               </div>
               <div className="cp-input-group">
-                <input type="text" className="cp-input" required />
+                <input 
+                  type="text" 
+                  name="subject"
+                  className="cp-input" 
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required 
+                />
                 <label className="cp-label">Subject</label>
               </div>
               <div className="cp-input-group">
-                <textarea className="cp-textarea" required></textarea>
+                <textarea 
+                  name="message"
+                  className="cp-textarea" 
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
                 <label className="cp-label">How can we help you?</label>
               </div>
-              <button type="submit" className="cp-submit-btn">
-                Send Request <Send size={20} />
+              <button 
+                type="submit" 
+                className="cp-submit-btn"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    Sending Request <Loader2 className="cp-spinner" size={20} />
+                  </>
+                ) : (
+                  <>
+                    Send Request <Send size={20} />
+                  </>
+                )}
               </button>
             </form>
           </motion.div>
