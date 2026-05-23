@@ -1,0 +1,96 @@
+.thank-you-page-wrapper {
+  background: transparent;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.ty-hero {
+  position: relative;
+  width: 100%;
+  padding: 150px 5% 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, rgba(224, 176, 107, 0.1) 0%, transparent 70%);
+}
+
+.ty-content {
+  text-align: center;
+  max-width: 600px;
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4rem 2rem;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ty-icon-wrapper {
+  width: 120px;
+  height: 120px;
+  background: rgba(224, 176, 107, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(224, 176, 107, 0.2);
+}
+
+.ty-icon {
+  color: var(--accent-color);
+}
+
+.ty-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+  background: linear-gradient(180deg, #fff 0%, #666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ty-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #aaa;
+  margin-bottom: 2.5rem;
+}
+
+.ty-subtitle strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.ty-home-btn {
+  background: var(--accent-color);
+  color: #000;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.ty-home-btn:hover {
+  background: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+}

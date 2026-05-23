@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -11,6 +10,7 @@ import BrandStrategyPage from './pages/BrandStrategyPage';
 import ProductionEntertainmentPage from './pages/ProductionEntertainmentPage';
 import DigitalMarketingPage from './pages/DigitalMarketingPage';
 import IntegratedBrandPage from './pages/IntegratedBrandPage';
+import ThankYouPage from './pages/ThankYouPage';
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
             <Route path="/services/production-entertainment" element={<ProductionEntertainmentPage />} />
             <Route path="/services/digital-performance-marketing" element={<DigitalMarketingPage />} />
             <Route path="/services/integrated-brand-solutions" element={<IntegratedBrandPage />} />
+            <Route path="/thank-you" element={<ThankYouPage />} />
           </Routes>
         </main>
         <Footer />

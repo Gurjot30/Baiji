@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Phone, Mail, Send, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import './ContactPage.css';
 
 const ContactPage = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -51,9 +53,8 @@ const ContactPage = () => {
       const result = await response.json();
 
       if (response.ok && result.success === "true") {
-        setSubmitStatus('success');
-        setSubmitMessage("Thank you! Your enquiry details have been successfully submitted.");
         setFormData({ name: '', email: '', subject: '', message: '' });
+        navigate('/thank-you');
       } else {
         throw new Error(result.message || "Failed to submit form. Please try again.");
       }
