@@ -7,14 +7,14 @@ import './Hero.css';
 const slides = [
   {
     id: 1,
-    image: "/hero_slide_1.jpg",
+    image: "/hero_slide_2_new.jpg",
     titleLine1: "Where Brands",
     titleLine2: "Meet Entertainment",
     subtitle: "A unified approach to marketing and cinematic storytelling.",
   },
   {
     id: 2,
-    image: "/hero_slide_2_new.jpg",
+    image: "/hero_slide_1.jpg",
     titleLine1: "Creative Strategy.",
     titleLine2: "Media Power. Film Integration.",
     subtitle: "End-to-end solutions that elevate your brand's presence.",
