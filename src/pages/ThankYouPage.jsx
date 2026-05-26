@@ -19,7 +19,7 @@ const ThankYouPage = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="ty-icon-wrapper">
-            <CheckCircle size={80} className="ty-icon" />
+            <CheckCircle size={50} className="ty-icon" />
           </div>
           <h1 className="ty-title">Thank You!</h1>
           <p className="ty-subtitle">

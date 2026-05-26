@@ -14,7 +14,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/hero_slide_2.jpg",
+    image: "/hero_slide_2_new.jpg",
     titleLine1: "Creative Strategy.",
     titleLine2: "Media Power. Film Integration.",
     subtitle: "End-to-end solutions that elevate your brand's presence.",
