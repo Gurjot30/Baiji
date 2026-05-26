@@ -4,7 +4,7 @@ import './Clients.css';
 
 const Clients = () => {
   const clientLogos = [
-    '/sky-tmt.png',
+    '/sky-tmt.jpg',
     '/quickheal.png',
     '/star555.png',
     '/srmb-tmt.png',
