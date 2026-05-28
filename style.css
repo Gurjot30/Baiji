@@ -214,6 +214,7 @@ ul { list-style: none; }
   }
   .nav-logo {
     height: 140px;
+    margin-left: -20px;
   }
 }
 .hero {
