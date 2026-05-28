@@ -1,18 +1,611 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>baiji</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baiji Entertainments</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 </head>
-
-
-
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
 
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="/" class="logo-link">
+          <img src="assets/logo.png" alt="Baiji Entertainments Logo" class="nav-logo" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li class="dropdown-container">
+          <span class="dropdown-trigger">Services</span>
+          <ul class="dropdown-menu">
+            <li><a href="/services/brand-creative-strategy">Brand & Creative Strategy</a></li>
+            <li><a href="/services/production-entertainment">Production & Entertainment</a></li>
+            <li><a href="/services/digital-performance-marketing">Digital & Performance Marketing</a></li>
+            <li><a href="/services/integrated-brand-solutions">Integrated Brand Solutions</a></li>
+          </ul>
+        </li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero flex-center">
+    <div class="hero-bg" style="background-image: url('/hero_slide_2_new.jpg');">
+      <div class="overlay"></div>
+    </div>
+    
+    <div class="container hero-content text-center">
+      <div class="fade-in">
+        <h1 class="heading-xl">
+          Where Brands <br />
+          <span class="text-accent">Meet Entertainment</span>
+        </h1>
+        
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Work With Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-controls">
+      <button class="hero-arrow prev-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="hero-dots">
+        <button class="hero-dot active"></button>
+        <button class="hero-dot"></button>
+        <button class="hero-dot"></button>
+      </div>
+      <button class="hero-arrow next-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section class="section clients-section">
+    <div class="container text-center">
+      <div class="section-header fade-in">
+        <h2 class="heading-lg" style="font-size: 3.5rem;"><span style="color: #fff;">Trusted</span> <span class="text-accent">By</span></h2>
+        <div class="divider mx-auto"></div>
+      </div>
+
+      <div class="clients-grid">
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/sky-tmt.jpg" alt="Client 1" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/quickheal.png" alt="Client 2" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/star555.png" alt="Client 3" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/srmb-tmt.png" alt="Client 4" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/laminex.png" alt="Client 5" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/dominos-transparent.png" alt="Client 6" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/magic-moments.png" alt="Client 7" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/brand-harrison.png" alt="Client 8" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/oshea.png" alt="Client 9" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/sujata.png" alt="Client 10" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/popular.png" alt="Client 11" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/redcliffe.png" alt="Client 12" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/sarvottam.png" alt="Client 13" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/brand-gallantt.png" alt="Client 14" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/brand-traya.png" alt="Client 15" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/brand-jkmasale.png" alt="Client 16" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/brand-birlahil.png" alt="Client 17" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/brand-haldiramsnagpur.png" alt="Client 18" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/brand-devbhoomi.png" alt="Client 19" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/brand-paras.png" alt="Client 20" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+        <div class="client-logo glass-panel fade-in">
+          <img src="assets/vikram-tea.png" alt="Client 21" style="width: 100%; height: 100%; object-fit: contain;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services-reference-section fade-in" aria-label="Our services">
+    <a href="/contact" style="display: block; text-decoration: none;">
+      <div class="services-reference-frame" style="cursor: pointer;">
+        <img
+          class="services-reference-art"
+          src="assets/services-reference.png"
+          alt="Solutions that drive impact services"
+        />
+        <span class="services-ambient-glow" aria-hidden="true"></span>
+        <span class="services-title-shine" aria-hidden="true"></span>
+        <span class="services-line-spark" aria-hidden="true"></span>
+        <span class="services-card-pulse services-card-pulse-one" style="animation-delay: 0.5s;" aria-hidden="true"></span>
+        <span class="services-card-pulse services-card-pulse-two" style="animation-delay: 0.6799999999999999s;" aria-hidden="true"></span>
+        <span class="services-card-pulse services-card-pulse-three" style="animation-delay: 0.86s;" aria-hidden="true"></span>
+        <span class="services-card-pulse services-card-pulse-four" style="animation-delay: 1.04s;" aria-hidden="true"></span>
+        <span class="services-card-pulse services-card-pulse-five" style="animation-delay: 1.22s;" aria-hidden="true"></span>
+        <span class="services-card-pulse services-card-pulse-six" style="animation-delay: 1.4s;" aria-hidden="true"></span>
+      </div>
+    </a>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio-section fade-in" id="portfolio">
+    <div class="container">
+      <h2 class="section-title"><span style="color: #fff;">Our</span> <span class="text-accent">Portfolio</span></h2>
+      <div class="portfolio-category fade-in">
+        <h3 class="category-title">Films</h3>
+        <div class="slider-container">
+          <div class="slider-track">
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-jollyllb2.png" alt="films work 0" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-krrish3.png" alt="films work 1" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-munnamichael.png" alt="films work 2" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-zero.png" alt="films work 3" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-sultan.png" alt="films work 4" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-bhooth-bangla.jpg" alt="films work 5" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-baaghi4.png" alt="films work 6" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-thamma.png" alt="films work 7" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-husbandbiwi.png" alt="films work 8" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-groundzero.png" alt="films work 9" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-maidaan.png" alt="films work 10" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-dreamgirl2-hq.jpg" alt="films work 11" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-mrmrsmahi.jpg" alt="films work 12" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-crew.jpg" alt="films work 13" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-bitterless.jpg" alt="films work 14" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-singhamagain2.jpg" alt="films work 15" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-fateh.jpg" alt="films work 16" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-ruslaan.jpg" alt="films work 17" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-crakk.jpg" alt="films work 18" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-mainatalhoon.jpg" alt="films work 19" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-ganapath.jpg" alt="films work 20" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-dunki.jpg" alt="films work 21" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-akelli.jpg" alt="films work 22" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-fukrey3.jpg" alt="films work 23" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-pathaan.jpg" alt="films work 24" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-jollyllb2.png" alt="films work 25" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-krrish3.png" alt="films work 26" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-munnamichael.png" alt="films work 27" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-zero.png" alt="films work 28" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-sultan.png" alt="films work 29" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-bhooth-bangla.jpg" alt="films work 30" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-baaghi4.png" alt="films work 31" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-thamma.png" alt="films work 32" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-husbandbiwi.png" alt="films work 33" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-groundzero.png" alt="films work 34" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-maidaan.png" alt="films work 35" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-dreamgirl2-hq.jpg" alt="films work 36" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-mrmrsmahi.jpg" alt="films work 37" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-crew.jpg" alt="films work 38" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-bitterless.jpg" alt="films work 39" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-singhamagain2.jpg" alt="films work 40" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-fateh.jpg" alt="films work 41" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-ruslaan.jpg" alt="films work 42" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-crakk.jpg" alt="films work 43" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-mainatalhoon.jpg" alt="films work 44" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-ganapath.jpg" alt="films work 45" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-dunki.jpg" alt="films work 46" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-akelli.jpg" alt="films work 47" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-fukrey3.jpg" alt="films work 48" />
+            </div>
+            <div class="portfolio-item portfolio-item-films">
+              <img src="assets/film-pathaan.jpg" alt="films work 49" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-category fade-in">
+        <h3 class="category-title">Branding</h3>
+        <div class="slider-container">
+          <div class="slider-track">
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/quickheal.png" alt="cobranding work 0" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/star555.png" alt="cobranding work 1" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/srmb-tmt.png" alt="cobranding work 2" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/laminex.png" alt="cobranding work 3" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/dominos-transparent.png" alt="cobranding work 4" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/magic-moments.png" alt="cobranding work 5" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-harrison.png" alt="cobranding work 6" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/oshea.png" alt="cobranding work 7" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/sujata.png" alt="cobranding work 8" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/popular.png" alt="cobranding work 9" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/redcliffe.png" alt="cobranding work 10" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/sarvottam.png" alt="cobranding work 11" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-gallantt.png" alt="cobranding work 12" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-traya.png" alt="cobranding work 13" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-jkmasale.png" alt="cobranding work 14" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-birlahil.png" alt="cobranding work 15" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-haldiramsnagpur.png" alt="cobranding work 16" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-devbhoomi.png" alt="cobranding work 17" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-paras.png" alt="cobranding work 18" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/vikram-tea.png" alt="cobranding work 19" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/quickheal.png" alt="cobranding work 20" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/star555.png" alt="cobranding work 21" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/srmb-tmt.png" alt="cobranding work 22" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/laminex.png" alt="cobranding work 23" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/dominos-transparent.png" alt="cobranding work 24" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/magic-moments.png" alt="cobranding work 25" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-harrison.png" alt="cobranding work 26" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/oshea.png" alt="cobranding work 27" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/sujata.png" alt="cobranding work 28" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/popular.png" alt="cobranding work 29" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/redcliffe.png" alt="cobranding work 30" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/sarvottam.png" alt="cobranding work 31" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-gallantt.png" alt="cobranding work 32" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-traya.png" alt="cobranding work 33" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-jkmasale.png" alt="cobranding work 34" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-birlahil.png" alt="cobranding work 35" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-haldiramsnagpur.png" alt="cobranding work 36" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-devbhoomi.png" alt="cobranding work 37" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/brand-paras.png" alt="cobranding work 38" />
+            </div>
+            <div class="portfolio-item portfolio-item-cobranding">
+              <img src="assets/vikram-tea.png" alt="cobranding work 39" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials-innovative-section fade-in" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center fade-in">
+        <span class="badge" style="font-size: 1.1rem; padding: 8px 20px; margin-bottom: 1.5rem;">Client Reviews</span>
+        <h2 class="heading-lg"><span style="color: #fff;">What They</span> <span class="text-accent">Say About Us</span></h2>
+        <div class="divider mx-auto"></div>
+      </div>
+
+      <div class="testimonials-split-layout">
+        <div class="testimonials-quote-area">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote huge-quote-bg"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          
+          <div class="active-quote-content fade-in">
+            <div class="rating-stars">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <h3 class="quote-text">"Baiji Entertainments transformed our brand's digital presence. Their cinematic approach to our launch campaign was beyond our expectations."</h3>
+            <div class="mobile-author-info">
+              <h4>Ananya Iyer</h4>
+              <span class="text-accent">Marketing Director, Aura Lux</span>
+            </div>
+          </div>
+
+          <div class="quote-progress">
+            <div class="progress-bar-fill" style="animation: fillProgress 6s linear forwards;"></div>
+          </div>
+        </div>
+
+        <div class="testimonials-authors-list">
+          <div class="author-list-item active">
+            <div class="author-indicator"></div>
+            <div class="author-details">
+              <h4>Ananya Iyer</h4>
+              <span>Marketing Director, Aura Lux</span>
+            </div>
+          </div>
+          <div class="author-list-item ">
+            <div class="author-indicator"></div>
+            <div class="author-details">
+              <h4>Vikram Malhotra</h4>
+              <span>CEO, Nexa Dynamics</span>
+            </div>
+          </div>
+          <div class="author-list-item ">
+            <div class="author-indicator"></div>
+            <div class="author-details">
+              <h4>Sarah Fernandes</h4>
+              <span>Creative Head, Bloom Media</span>
+            </div>
+          </div>
+          <div class="author-list-item ">
+            <div class="author-indicator"></div>
+            <div class="author-details">
+              <h4>Rajesh Khanna</h4>
+              <span>Founder, Heritage Foods</span>
+            </div>
+          </div>
+          <div class="author-list-item ">
+            <div class="author-indicator"></div>
+            <div class="author-details">
+              <h4>Priya Sharma</h4>
+              <span>CMO, Zenith Tech</span>
+            </div>
+          </div>
+          <div class="author-list-item ">
+            <div class="author-indicator"></div>
+            <div class="author-details">
+              <h4>Karan Singhania</h4>
+              <span>Director, Urban Lifestyle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer fade-in">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo-link">
+            <img src="assets/logo.png" alt="Baiji Entertainments Logo" class="footer-logo" />
+          </a>
+          <p class="footer-tagline">
+            A premium full-service creative advertising and entertainment agency. We transform ideas into unforgettable brand experiences.
+          </p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/baijientertainments/?hl=en" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/bai-ji-entertainments" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.facebook.com/baijientertainments" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@baijientertainments" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube"><path d="M2.5 7.17C2.15 8.16 2 9.68 2 12c0 2.32.15 3.84.5 4.83.6 1.7 1.83 2.94 3.53 3.53.99.35 2.51.5 4.83.5 2.32 0 3.84-.15 4.83-.5 1.7-.6 2.94-1.83 3.53-3.53.35-.99.5-2.51.5-4.83 0-2.32-.15-3.84-.5-4.83-.6-1.7-1.83-2.94-3.53-3.53-.99-.35-2.51-.5-4.83-.5-2.32 0-3.84.15-4.83.5-1.7.6-2.94 1.83-3.53 3.53z"/><path d="m10 15 5-3-5-3v6z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="/services/brand-creative-strategy">Brand & Creative Strategy</a></li>
+            <li><a href="/services/production-entertainment">Production & Entertainment</a></li>
+            <li><a href="/services/digital-performance-marketing">Digital & Performance Marketing</a></li>
+            <li><a href="/services/integrated-brand-solutions">Integrated Brand Solutions</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <ul>
+            <li class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>divyanshu@baijientertainments.com</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 99282 72728</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Divyanshu Sharma, Wing A, Flat no - 1701, Abrol Vastu Park, Near Ryan International School, Malad West - 400064</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>

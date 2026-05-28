@@ -1,0 +1,512 @@
+from create_html_pages import build_html, write_file
+
+content = """
+    <div class="ib-page">
+
+      <!-- HERO -->
+      <section class="ib-hero">
+        <div class="ib-hero-bg">
+          <div class="ib-glow-orb ib-orb-1"></div>
+          <div class="ib-glow-orb ib-orb-2"></div>
+        </div>
+
+        <div class="ib-marquee">
+          <div class="ib-marquee-content">
+            <span>INTEGRATED</span><span class="dot">•</span>
+            <span class="outline">BRAND</span><span class="dot">•</span>
+            <span>SOLUTIONS</span><span class="dot">•</span>
+            <span class="outline">INTEGRATED</span><span class="dot">•</span>
+            <span>BRAND</span><span class="dot">•</span>
+            <span class="outline">SOLUTIONS</span><span class="dot">•</span>
+            <span>INTEGRATED</span><span class="dot">•</span>
+            <span class="outline">BRAND</span><span class="dot">•</span>
+            <span>SOLUTIONS</span><span class="dot">•</span>
+            <span class="outline">INTEGRATED</span><span class="dot">•</span>
+            <span>BRAND</span><span class="dot">•</span>
+            <span class="outline">SOLUTIONS</span><span class="dot">•</span>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="ib-hero-content fade-in">
+            <h1 class="ib-title">
+              One <span class="text-accent">Powerful</span> Solution <br />
+              <span class="text-outline">For Every Brand Need</span>
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRO CONTENT SECTION -->
+      <section class="ib-intro-section">
+        <div class="ib-intro-grid-bg"></div>
+
+        <div class="container ib-relative-z">
+          <div class="ib-intro-layout">
+
+            <!-- LEFT -->
+            <div class="ib-intro-image-col fade-in">
+              <div class="ib-image-frame">
+                <img src="/ib_intro_visual.png" alt="Integrated Brand Command Center" class="ib-main-img" />
+                <div class="ib-img-glow-ring"></div>
+                <div class="ib-img-corner ib-corner-tl"></div>
+                <div class="ib-img-corner ib-corner-tr"></div>
+                <div class="ib-img-corner ib-corner-bl"></div>
+                <div class="ib-img-corner ib-corner-br"></div>
+              </div>
+
+              <!-- Floating stat badges -->
+              <div class="ib-stat-badge ib-badge-1 fade-in">
+                <span class="ib-badge-num">6+</span>
+                <span class="ib-badge-label">Service Pillars</span>
+              </div>
+
+              <div class="ib-stat-badge ib-badge-2 fade-in">
+                <span class="ib-badge-num">360°</span>
+                <span class="ib-badge-label">Brand Coverage</span>
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="ib-intro-text-col fade-in">
+              <span class="ib-section-label">Our Approach</span>
+              <h2>A Complete <span class="text-accent">Connected</span> Communication Ecosystem</h2>
+
+              <p class="ib-lead-para">
+                Modern brands need more than individual marketing services — they need a <strong>complete and connected communication ecosystem</strong>. Our Integrated Brand Solutions are designed to bring strategy, creativity, production, digital marketing, media planning, and entertainment together under one unified approach.
+              </p>
+              <p class="ib-body-para">
+                We help businesses create strong brand identities, audience engagement, and impactful campaigns through innovative thinking and strategic execution. From concept development to campaign execution, we provide end-to-end brand solutions that help businesses <strong>grow, connect, and stand out</strong> in today's competitive market.
+              </p>
+
+              <!-- Service Pillars Grid -->
+              <div class="ib-pillars-grid">
+                
+                <div class="ib-pillar-chip fade-in">
+                  <div class="ib-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                  </div>
+                  <span>Brand Strategy</span>
+                </div>
+                
+                <div class="ib-pillar-chip fade-in">
+                  <div class="ib-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  </div>
+                  <span>Creative Production</span>
+                </div>
+                
+                <div class="ib-pillar-chip fade-in">
+                  <div class="ib-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  </div>
+                  <span>Digital Marketing</span>
+                </div>
+                
+                <div class="ib-pillar-chip fade-in">
+                  <div class="ib-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  </div>
+                  <span>Performance</span>
+                </div>
+
+                <div class="ib-pillar-chip fade-in">
+                  <div class="ib-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <span>Entertainment</span>
+                </div>
+
+                <div class="ib-pillar-chip fade-in">
+                  <div class="ib-pillar-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </div>
+                  <span>Media Planning</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE DELIVER -->
+      <section class="ib-deliver-section">
+        <div class="ib-deliver-bg"></div>
+        <div class="container ib-relative-z">
+          <div class="ib-deliver-header fade-in">
+            <span class="ib-section-label">Our Services</span>
+            <h2>What We <span class="text-accent">Deliver</span></h2>
+          </div>
+        </div>
+
+        <div class="ib-deliver-panels">
+          
+          <div class="ib-deliver-panel fade-in">
+            <div class="ib-panel-image-col">
+              <div class="ib-panel-img-wrap">
+                <img src="/ib_deliver_1.png" alt="Brand Strategy & Communication" class="ib-panel-img" />
+                <div class="ib-panel-img-overlay"></div>
+                <div class="ib-panel-num-watermark">01</div>
+              </div>
+            </div>
+            <div class="ib-panel-text-col">
+              <div class="ib-panel-text-inner">
+                <div class="ib-panel-step-label">01 / 05</div>
+                <h3>Brand Strategy & Communication</h3>
+                <div class="ib-panel-divider"></div>
+                <p>We develop strong communication strategies that help brands define their identity, positioning, and audience connection through impactful storytelling and creative direction.</p>
+                <div class="ib-panel-tags">
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Brand Positioning</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Creative Strategy</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Communication Planning</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Campaign Ideation</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Brand Storytelling</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ib-deliver-panel ib-panel-reverse fade-in">
+            <div class="ib-panel-image-col">
+              <div class="ib-panel-img-wrap">
+                <img src="/ib_deliver_2.png" alt="Creative Production & Content" class="ib-panel-img" />
+                <div class="ib-panel-img-overlay"></div>
+                <div class="ib-panel-num-watermark">02</div>
+              </div>
+            </div>
+            <div class="ib-panel-text-col">
+              <div class="ib-panel-text-inner">
+                <div class="ib-panel-step-label">02 / 05</div>
+                <h3>Creative Production & Content</h3>
+                <div class="ib-panel-divider"></div>
+                <p>Our creative production solutions focus on developing visually engaging content that strengthens brand identity and audience interaction.</p>
+                <div class="ib-panel-tags">
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Ad Film Production</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Brand Videos</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Motion Graphics</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Creative Design</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Promotional Content</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ib-deliver-panel fade-in">
+            <div class="ib-panel-image-col">
+              <div class="ib-panel-img-wrap">
+                <img src="/ib_deliver_3.png" alt="Digital & Media Solutions" class="ib-panel-img" />
+                <div class="ib-panel-img-overlay"></div>
+                <div class="ib-panel-num-watermark">03</div>
+              </div>
+            </div>
+            <div class="ib-panel-text-col">
+              <div class="ib-panel-text-inner">
+                <div class="ib-panel-step-label">03 / 05</div>
+                <h3>Digital & Media Solutions</h3>
+                <div class="ib-panel-divider"></div>
+                <p>We create digital and media campaigns that increase visibility, engagement, and performance across online and offline platforms.</p>
+                <div class="ib-panel-tags">
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Social Media Marketing</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Media Planning</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Paid Advertising</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Digital Campaigns</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Performance Marketing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ib-deliver-panel ib-panel-reverse fade-in">
+            <div class="ib-panel-image-col">
+              <div class="ib-panel-img-wrap">
+                <img src="/ib_deliver_4.png" alt="Entertainment & Celebrity Collaborations" class="ib-panel-img" />
+                <div class="ib-panel-img-overlay"></div>
+                <div class="ib-panel-num-watermark">04</div>
+              </div>
+            </div>
+            <div class="ib-panel-text-col">
+              <div class="ib-panel-text-inner">
+                <div class="ib-panel-step-label">04 / 05</div>
+                <h3>Entertainment & Celebrity Collaborations</h3>
+                <div class="ib-panel-divider"></div>
+                <p>We help brands connect with audiences through entertainment-driven campaigns, celebrity collaborations, and promotional partnerships.</p>
+                <div class="ib-panel-tags">
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Celebrity Management</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Film Promotions</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Influencer Collaborations</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Entertainment Campaigns</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Brand Partnerships</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ib-deliver-panel fade-in">
+            <div class="ib-panel-image-col">
+              <div class="ib-panel-img-wrap">
+                <img src="/ib_deliver_5.png" alt="Campaign Execution & Promotions" class="ib-panel-img" />
+                <div class="ib-panel-img-overlay"></div>
+                <div class="ib-panel-num-watermark">05</div>
+              </div>
+            </div>
+            <div class="ib-panel-text-col">
+              <div class="ib-panel-text-inner">
+                <div class="ib-panel-step-label">05 / 05</div>
+                <h3>Campaign Execution & Promotions</h3>
+                <div class="ib-panel-divider"></div>
+                <p>From planning to execution, we manage complete promotional campaigns that maximize audience reach and brand impact.</p>
+                <div class="ib-panel-tags">
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Brand Activations</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Promotional Campaigns</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Event Marketing</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Outdoor Promotions</span>
+                  <span class="ib-panel-tag fade-in"><span class="ib-tag-dot">◆</span>Integrated Media Execution</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="ib-why-section">
+        <div class="container">
+          <div class="ib-why-header fade-in">
+            <span class="ib-section-label">Our Advantage</span>
+            <h2>Why Brands Partner With <span class="text-accent">Baiji Entertainments</span></h2>
+          </div>
+
+          <div class="ib-why-bento">
+            
+            <div class="ib-why-card ib-card-wide ib-card-featured fade-in">
+              <div class="ib-why-num">01</div>
+              <div class="ib-why-icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="6" y="6" width="36" height="36" rx="6"/>
+                  <path d="M16 24h16M24 16v16" stroke-linecap="round"/>
+                  <circle cx="24" cy="24" r="5"/>
+                </svg>
+              </div>
+              <h3>End-To-End Brand Solutions</h3>
+              <p>We manage everything from strategy and production to marketing and promotions under one integrated approach — saving you time, effort, and resources.</p>
+            </div>
+
+            <div class="ib-why-card ib-card-narrow fade-in">
+              <div class="ib-why-num">02</div>
+              <div class="ib-why-icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M24 6l4 12h12l-10 7 4 12-10-7-10 7 4-12L8 18h12z" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Entertainment-Driven Creativity</h3>
+              <p>Our campaigns combine creative storytelling with entertainment-focused audience engagement for deeper brand impact.</p>
+            </div>
+
+            <div class="ib-why-card ib-card-narrow fade-in">
+              <div class="ib-why-num">03</div>
+              <div class="ib-why-icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <circle cx="24" cy="24" r="16"/>
+                  <path d="M24 14v10l7 4" stroke-linecap="round"/>
+                  <path d="M14 36l4-8M34 36l-4-8" stroke-linecap="round" opacity="0.5"/>
+                </svg>
+              </div>
+              <h3>Strategic & Result-Oriented Approach</h3>
+              <p>Every campaign is backed by planning, audience insights, and measurable performance goals to deliver real outcomes.</p>
+            </div>
+
+            <div class="ib-why-card ib-card-wide ib-card-dark fade-in">
+              <div class="ib-why-num">04</div>
+              <div class="ib-why-icon">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="4" y="10" width="18" height="12" rx="3"/>
+                  <rect x="26" y="10" width="18" height="12" rx="3"/>
+                  <rect x="4" y="28" width="18" height="12" rx="3"/>
+                  <rect x="26" y="28" width="18" height="12" rx="3"/>
+                  <path d="M13 22v6M35 22v6M22 16h4M22 34h4" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3>Multi-Platform Execution</h3>
+              <p>We ensure seamless brand communication across digital, media, entertainment, and promotional platforms — keeping your brand consistent everywhere audiences find you.</p>
+            </div>
+
+            <div class="ib-why-card ib-card-full ib-card-accent fade-in">
+              <div class="ib-why-num">05</div>
+              <div class="ib-card-full-inner">
+                <div class="ib-why-icon ib-icon-large">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z"/>
+                    <path d="M24 14c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10z" opacity="0.4"/>
+                    <circle cx="24" cy="24" r="4" fill="currentColor" stroke="none"/>
+                  </svg>
+                </div>
+                <div class="ib-card-full-text">
+                  <h3>Innovative Brand Experiences</h3>
+                  <p>We focus on creating memorable and impactful experiences that strengthen audience connection and brand identity — turning campaigns into lasting impressions.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR PROCESS -->
+      <section class="ib-process-section">
+        <div class="ib-process-dots-bg"></div>
+        <div class="container ib-relative-z">
+          <div class="ib-process-header fade-in">
+            <span class="ib-section-label">How We Work</span>
+            <h2>Our Integrated <span class="text-accent">Brand Approach</span></h2>
+          </div>
+
+          <div class="ib-process-zigzag">
+            
+            <div class="ib-zz-row ib-zz-left">
+              <div class="ib-zz-card fade-in">
+                <div class="ib-zz-card-glow"></div>
+                <div class="ib-zz-icon">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="24" cy="18" r="8"/>
+                    <path d="M8 42c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke-linecap="round"/>
+                    <path d="M32 10l8-6M32 14l6-2" stroke-linecap="round" opacity="0.6"/>
+                  </svg>
+                </div>
+                <div class="ib-zz-step-badge">01</div>
+                <h3 class="ib-zz-title">Understanding The Brand</h3>
+                <p class="ib-zz-desc">Analyzing business goals, audience behavior, and market positioning.</p>
+              </div>
+
+              <div class="ib-zz-spine">
+                <div class="ib-zz-hex fade-in"><span>01</span></div>
+                <div class="ib-zz-spine-line"></div>
+              </div>
+              <div class="ib-zz-spacer"></div>
+            </div>
+
+            <div class="ib-zz-row ib-zz-right">
+              <div class="ib-zz-card fade-in">
+                <div class="ib-zz-card-glow"></div>
+                <div class="ib-zz-icon">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="6" y="8" width="36" height="32" rx="4"/>
+                    <path d="M14 20h20M14 28h14" stroke-linecap="round"/>
+                    <path d="M30 28l8-6" stroke-linecap="round"/>
+                    <circle cx="36" cy="20" r="3" fill="currentColor" stroke="none"/>
+                  </svg>
+                </div>
+                <div class="ib-zz-step-badge">02</div>
+                <h3 class="ib-zz-title">Strategic Planning</h3>
+                <p class="ib-zz-desc">Creating customized marketing and communication strategies.</p>
+              </div>
+
+              <div class="ib-zz-spine">
+                <div class="ib-zz-hex fade-in"><span>02</span></div>
+                <div class="ib-zz-spine-line"></div>
+              </div>
+              <div class="ib-zz-spacer"></div>
+            </div>
+
+            <div class="ib-zz-row ib-zz-left">
+              <div class="ib-zz-card fade-in">
+                <div class="ib-zz-card-glow"></div>
+                <div class="ib-zz-icon">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M10 38l6-6 4 4 8-10 6 8 4-6 4 10H10z"/>
+                    <circle cx="16" cy="16" r="5"/>
+                    <path d="M28 8l12 12" stroke-linecap="round" opacity="0.5"/>
+                  </svg>
+                </div>
+                <div class="ib-zz-step-badge">03</div>
+                <h3 class="ib-zz-title">Creative Development</h3>
+                <p class="ib-zz-desc">Designing engaging visuals, campaigns, and storytelling concepts.</p>
+              </div>
+
+              <div class="ib-zz-spine">
+                <div class="ib-zz-hex fade-in"><span>03</span></div>
+                <div class="ib-zz-spine-line"></div>
+              </div>
+              <div class="ib-zz-spacer"></div>
+            </div>
+
+            <div class="ib-zz-row ib-zz-right">
+              <div class="ib-zz-card fade-in">
+                <div class="ib-zz-card-glow"></div>
+                <div class="ib-zz-icon">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M8 24L24 8l16 16" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24 8v30" stroke-linecap="round"/>
+                    <path d="M14 44h20" stroke-linecap="round" opacity="0.5"/>
+                    <path d="M16 32l-8 5M32 32l8 5" stroke-linecap="round" opacity="0.5"/>
+                  </svg>
+                </div>
+                <div class="ib-zz-step-badge">04</div>
+                <h3 class="ib-zz-title">Campaign Execution</h3>
+                <p class="ib-zz-desc">Managing promotions, media, entertainment, and digital campaigns.</p>
+              </div>
+
+              <div class="ib-zz-spine">
+                <div class="ib-zz-hex fade-in"><span>04</span></div>
+                <div class="ib-zz-spine-line"></div>
+              </div>
+              <div class="ib-zz-spacer"></div>
+            </div>
+
+            <div class="ib-zz-row ib-zz-left">
+              <div class="ib-zz-card fade-in">
+                <div class="ib-zz-card-glow"></div>
+                <div class="ib-zz-icon">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <polyline points="6,38 14,26 22,32 32,14 42,20" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="14" cy="26" r="3" fill="currentColor" stroke="none"/>
+                    <circle cx="22" cy="32" r="3" fill="currentColor" stroke="none"/>
+                    <circle cx="32" cy="14" r="3" fill="currentColor" stroke="none"/>
+                    <path d="M38 8v8h-8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="ib-zz-step-badge">05</div>
+                <h3 class="ib-zz-title">Optimization & Growth</h3>
+                <p class="ib-zz-desc">Tracking performance and continuously improving campaign effectiveness.</p>
+              </div>
+
+              <div class="ib-zz-spine">
+                <div class="ib-zz-hex fade-in"><span>05</span></div>
+              </div>
+              <div class="ib-zz-spacer"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Integrated CTA Section -->
+      <section class="ib-cta-section">
+        <div class="ib-cta-bg">
+          <div class="ib-cta-glow"></div>
+        </div>
+        <div class="container relative-z">
+          <div class="ib-cta-box fade-in">
+            <h2 class="ib-cta-title">
+              Ready for a Unified <br/>
+              <span class="text-accent">Brand Communication Strategy?</span>
+            </h2>
+            <p class="ib-cta-desc">
+              Let us bring strategy, creativity, production, digital marketing, media planning and celebrity management together under one unified high-impact approach.
+            </p>
+            <div class="ib-cta-actions">
+              <a href="contact.html" class="ib-cta-btn btn-primary">Start Your Partnership</a>
+              <a href="portfolio.html" class="ib-cta-btn btn-secondary">View Our Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+"""
+
+html = build_html("Integrated Brand Solutions - Baiji Entertainments", content)
+write_file("html-version/integrated-brand.html", html)
+print("integrated-brand.html created.")
