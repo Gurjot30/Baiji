@@ -221,4 +221,60 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start auto-play
     startTestimonialTimer();
   }
+
+  // Analytics Counter Logic
+  const statNumbers = document.querySelectorAll('.stat-number');
+  if (statNumbers.length > 0) {
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const originalText = el.getAttribute('data-original') || el.innerText;
+          
+          if (!el.getAttribute('data-original')) {
+            el.setAttribute('data-original', originalText);
+          }
+          
+          const numericPart = parseInt(originalText.replace(/[^0-9]/g, '')) || 0;
+          const suffix = originalText.replace(/[0-9]/g, '');
+          
+          if (numericPart === 0) return;
+          
+          let start = 0;
+          const duration = 2000; // 2 seconds
+          let startTime = null;
+          
+          const animate = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const currentCount = Math.floor(progress * numericPart);
+            
+            el.innerText = `${currentCount}${suffix}`;
+            
+            if (progress < 1) {
+              window.requestAnimationFrame(animate);
+            } else {
+              el.innerText = originalText;
+            }
+          };
+          
+          window.requestAnimationFrame(animate);
+          
+          // Unobserve so it only animates once
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    statNumbers.forEach(stat => {
+      // Set to 0 initially to prevent flash of full number
+      const originalText = stat.innerText;
+      if (!stat.getAttribute('data-original')) {
+        stat.setAttribute('data-original', originalText);
+        const suffix = originalText.replace(/[0-9]/g, '');
+        stat.innerText = `0${suffix}`;
+      }
+      counterObserver.observe(stat);
+    });
+  }
 });
