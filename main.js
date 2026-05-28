@@ -277,4 +277,25 @@ document.addEventListener('DOMContentLoaded', () => {
       counterObserver.observe(stat);
     });
   }
+
+  // Navbar Scroll Logic
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      
+      if (scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      // Hide navbar when scroll crosses hero section (approx 100vh)
+      if (scrollY > window.innerHeight) {
+        navbar.classList.add('hidden');
+      } else {
+        navbar.classList.remove('hidden');
+      }
+    });
+  }
 });
