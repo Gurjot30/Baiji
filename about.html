@@ -347,15 +347,15 @@
       teamSelectorsContainer.innerHTML = '';
       teamData.forEach((member, index) => {
         const div = document.createElement('div');
-        div.className = \`team-selector-item \${index === 0 ? 'active' : ''} \${member.highlight ? 'highlighted-selector' : ''} fade-in\`;
-        div.innerHTML = \`
-          <img src="\${member.image}" alt="\${member.name}" class="team-thumbnail" />
+        div.className = `team-selector-item ${index === 0 ? 'active' : ''} ${member.highlight ? 'highlighted-selector' : ''} fade-in`;
+        div.innerHTML = `
+          <img src="${member.image}" alt="${member.name}" class="team-thumbnail" />
           <div class="team-selector-info">
-            <h4>\${member.name}</h4>
-            <span class="text-accent">\${member.headline.split('•')[0].trim()}</span>
-            \${member.highlight ? '<span class="mini-partner-label">Key Partner</span>' : ''}
+            <h4>${member.name}</h4>
+            <span class="text-accent">${member.headline.split('•')[0].trim()}</span>
+            ${member.highlight ? '<span class="mini-partner-label">Key Partner</span>' : ''}
           </div>
-        \`;
+        `;
         div.onclick = () => updateMainDisplay(index, div);
         teamSelectorsContainer.appendChild(div);
       });
@@ -371,7 +371,7 @@
       teamName.textContent = member.name;
       teamHeadline.textContent = member.headline;
       
-      teamBioText.innerHTML = member.bio.map(p => \`<p>\${p}</p>\`).join('');
+      teamBioText.innerHTML = member.bio.map(p => `<p>${p}</p>`).join('');
       
       if (member.highlight) {
         teamHighlight.style.display = 'inline-flex';
