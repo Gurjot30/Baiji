@@ -118,4 +118,107 @@ document.addEventListener('DOMContentLoaded', () => {
     const clone = track.innerHTML;
     track.innerHTML += clone;
   });
+
+  // Testimonials Logic
+  const testimonials = [
+    {
+      name: "Ananya Iyer",
+      role: "Marketing Director, Aura Lux",
+      text: "Baiji Entertainments transformed our brand's digital presence. Their cinematic approach to our launch campaign was beyond our expectations."
+    },
+    {
+      name: "Vikram Malhotra",
+      role: "CEO, Nexa Dynamics",
+      text: "The 3C model they implemented for our strategy provided us with insights we hadn't considered. Truly a partner in our growth."
+    },
+    {
+      name: "Sarah Fernandes",
+      role: "Creative Head, Bloom Media",
+      text: "Working with Divyanshu and his team was a breeze. They understand the nuances of storytelling and brand building perfectly."
+    },
+    {
+      name: "Rajesh Khanna",
+      role: "Founder, Heritage Foods",
+      text: "From celebrity management to national campaigns, they handle everything with extreme professionalism and creative flair."
+    },
+    {
+      name: "Priya Sharma",
+      role: "CMO, Zenith Tech",
+      text: "Their ability to weave narratives that resonate across diverse demographics is unparalleled. A top-tier agency."
+    },
+    {
+      name: "Karan Singhania",
+      role: "Director, Urban Lifestyle",
+      text: "The team's dedication to our vision and their innovative execution resulted in our most successful quarter yet."
+    }
+  ];
+
+  const authorItems = document.querySelectorAll('.author-list-item');
+  const quoteText = document.querySelector('.quote-text');
+  const mobileAuthorName = document.querySelector('.mobile-author-info h4');
+  const mobileAuthorRole = document.querySelector('.mobile-author-info .text-accent');
+  const activeQuoteContent = document.querySelector('.active-quote-content');
+  const quoteProgressContainer = document.querySelector('.quote-progress');
+  
+  if (authorItems.length > 0 && quoteText && activeQuoteContent) {
+    let currentTestimonialIndex = 0;
+    let testimonialTimer;
+    
+    activeQuoteContent.style.transition = 'opacity 0.3s ease';
+
+    function updateTestimonial(index) {
+      // Remove active class
+      authorItems.forEach(item => item.classList.remove('active'));
+      
+      // Add active class to new item
+      if (authorItems[index]) {
+        authorItems[index].classList.add('active');
+      }
+      
+      // Fade out quote
+      activeQuoteContent.style.opacity = 0;
+      
+      setTimeout(() => {
+        const t = testimonials[index];
+        quoteText.textContent = `"${t.text}"`;
+        if (mobileAuthorName) mobileAuthorName.textContent = t.name;
+        if (mobileAuthorRole) mobileAuthorRole.textContent = t.role;
+        
+        // Reset progress bar animation
+        if (quoteProgressContainer) {
+          const oldBar = quoteProgressContainer.querySelector('.progress-bar-fill');
+          if (oldBar) {
+            oldBar.remove();
+          }
+          const newBar = document.createElement('div');
+          newBar.className = 'progress-bar-fill';
+          newBar.style.animation = 'fillProgress 6s linear forwards';
+          quoteProgressContainer.appendChild(newBar);
+        }
+
+        // Fade in quote
+        activeQuoteContent.style.opacity = 1;
+      }, 300);
+    }
+
+    function startTestimonialTimer() {
+      clearInterval(testimonialTimer);
+      testimonialTimer = setInterval(() => {
+        currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+        updateTestimonial(currentTestimonialIndex);
+      }, 6000);
+    }
+
+    // Add click events to author items
+    authorItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        currentTestimonialIndex = index;
+        updateTestimonial(index);
+        startTestimonialTimer();
+      });
+    });
+
+    // Start auto-play
+    startTestimonialTimer();
+  }
 });
