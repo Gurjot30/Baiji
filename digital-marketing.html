@@ -286,7 +286,7 @@
           </div>
 
           <div class="dm-accordion-container">
-            <div class="dm-accordion-panel" style="background-image: url(/dm_why_1.png); background-size: cover; background-position: center;">
+            <div class="dm-accordion-panel" style="background-image: url(assets/dm_why_1.png); background-size: cover; background-position: center;">
               <div class="dm-accordion-overlay"></div>
               <div class="dm-accordion-content">
                 <div class="dm-accordion-num">01</div>
@@ -294,7 +294,7 @@
                 <p class="dm-accordion-desc">We combine creative storytelling with performance marketing strategies for better engagement and measurable growth.</p>
               </div>
             </div>
-            <div class="dm-accordion-panel" style="background-image: url(/dm_why_2.png); background-size: cover; background-position: center;">
+            <div class="dm-accordion-panel" style="background-image: url(assets/dm_why_2.png); background-size: cover; background-position: center;">
               <div class="dm-accordion-overlay"></div>
               <div class="dm-accordion-content">
                 <div class="dm-accordion-num">02</div>
@@ -302,7 +302,7 @@
                 <p class="dm-accordion-desc">Every campaign is designed based on audience behavior, digital trends, and brand objectives.</p>
               </div>
             </div>
-            <div class="dm-accordion-panel" style="background-image: url(/dm_why_3.png); background-size: cover; background-position: center;">
+            <div class="dm-accordion-panel" style="background-image: url(assets/dm_why_3.png); background-size: cover; background-position: center;">
               <div class="dm-accordion-overlay"></div>
               <div class="dm-accordion-content">
                 <div class="dm-accordion-num">03</div>
@@ -310,7 +310,7 @@
                 <p class="dm-accordion-desc">Our strategies focus on visibility, lead generation, conversions, and long-term brand growth.</p>
               </div>
             </div>
-            <div class="dm-accordion-panel" style="background-image: url(/dm_why_4.png); background-size: cover; background-position: center;">
+            <div class="dm-accordion-panel" style="background-image: url(assets/dm_why_4.png); background-size: cover; background-position: center;">
               <div class="dm-accordion-overlay"></div>
               <div class="dm-accordion-content">
                 <div class="dm-accordion-num">04</div>
@@ -318,7 +318,7 @@
                 <p class="dm-accordion-desc">We create campaigns across social media, search engines, digital advertising, and entertainment platforms.</p>
               </div>
             </div>
-            <div class="dm-accordion-panel" style="background-image: url(/dm_why_5.png); background-size: cover; background-position: center;">
+            <div class="dm-accordion-panel" style="background-image: url(assets/dm_why_5.png); background-size: cover; background-position: center;">
               <div class="dm-accordion-overlay"></div>
               <div class="dm-accordion-content">
                 <div class="dm-accordion-num">05</div>
@@ -510,5 +510,28 @@
     </div>
   </footer>
   <script src="main.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.dm-tab-btn');
+    const contents = document.querySelectorAll('.dm-showcase-content-wrapper');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.style.display = 'none');
+        
+        tab.classList.add('active');
+        const targetId = tab.getAttribute('data-tab');
+        const targetContent = document.getElementById('dm-tab-content-' + targetId);
+        if (targetContent) {
+          targetContent.style.display = 'flex'; // The original CSS uses flex or grid for this wrapper usually. Actually, let's just clear inline display so CSS takes over.
+          targetContent.style.display = '';
+        }
+      });
+    });
+  });
+</script>
 </body>
+
 </html>
