@@ -69,21 +69,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const slide = heroSlides[index];
     
-    // Fade out text
+    // Fade out text and background
     heroTitle1.style.opacity = 0;
     heroTitle2.style.opacity = 0;
+    heroBg.style.transition = 'opacity 0.3s ease-in-out';
+    heroBg.style.opacity = 0;
     
     setTimeout(() => {
       heroBg.style.backgroundImage = `url('${slide.image}')`;
       heroTitle1.textContent = slide.title1;
       heroTitle2.textContent = slide.title2;
       
-      // Fade in text
+      // Fade back in
       heroTitle1.style.transition = 'opacity 0.5s';
       heroTitle2.style.transition = 'opacity 0.5s';
       heroTitle1.style.opacity = 1;
       heroTitle2.style.opacity = 1;
-    }, 300); // Wait for fade out to complete before changing text
+      heroBg.style.opacity = 1;
+    }, 300); // Wait for fade out to complete before changing text and image
   }
 
   if (prevBtn && nextBtn) {
