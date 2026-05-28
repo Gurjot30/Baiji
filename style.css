@@ -659,6 +659,20 @@ ul { list-style: none; }
   display: flex;
   gap: 20px;
   width: max-content;
+  animation: scroll-portfolio 60s linear infinite;
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-portfolio {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 10px));
+  }
 }
 
 .portfolio-item {
