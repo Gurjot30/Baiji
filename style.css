@@ -217,8 +217,7 @@ ul { list-style: none; }
   }
 }
 .hero {
-  height: 100vh;
-  min-height: 600px;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -3990,7 +3989,7 @@ ul { list-style: none; }
 
 .dm-accordion-container {
   display: flex;
-  height: 600px;
+  min-height: 600px;
   gap: 1rem;
   width: 100%;
   margin-top: 2rem;
@@ -4105,7 +4104,7 @@ ul { list-style: none; }
 @media (max-width: 1024px) {
   .dm-accordion-container {
     flex-direction: column;
-    height: 800px;
+    min-height: 800px;
   }
   
   .dm-accordion-heading {
