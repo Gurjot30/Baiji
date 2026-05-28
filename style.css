@@ -2825,7 +2825,7 @@ ul { list-style: none; }
   }
   
   .bs-title {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 8vw, 3rem);
   }
   
   .bs-text-block {
@@ -5933,7 +5933,7 @@ ul { list-style: none; }
   }
   
   .pe-title {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 8vw, 3rem);
   }
 }
 
@@ -7227,7 +7227,7 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   .cp-title {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 8vw, 3rem);
   }
   
   .cp-hero {
