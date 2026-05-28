@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You - Baiji Entertainments</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+import os
+import re
 
-    <!-- Navbar -->
-    <!-- Navbar -->
+NAVBAR_HTML = """  <!-- Navbar -->
   <nav class="navbar">
     <div class="container nav-container">
       <div class="logo">
@@ -33,35 +25,9 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-  </nav>
+  </nav>"""
 
-  <div class="thank-you-page-wrapper">
-    <section class="ty-hero">
-      <div class="ty-content fade-in">
-        <div class="ty-icon-wrapper">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ty-icon">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-          </svg>
-        </div>
-        <h1 class="ty-title">Thank You!</h1>
-        <p class="ty-subtitle">
-          Your enquiry has been successfully sent. <br />
-          Our team at <strong>Baiji Entertainments</strong> will review it and get back to you shortly.
-        </p>
-        <a href="index.html" class="ty-home-btn">
-          Return to Home 
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
-      </div>
-    </section>
-  </div>
-
-    <!-- Footer -->
-    <!-- Footer -->
+FOOTER_HTML = """  <!-- Footer -->
   <footer id="contact" class="footer fade-in">
     <div class="container">
       <div class="footer-grid">
@@ -127,8 +93,39 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer>"""
 
-  <script src="main.js"></script>
-</body>
-</html>
+def process_file(filepath):
+    with open(filepath, 'r') as f:
+        content = f.read()
+
+    # Replace navbar
+    content = re.sub(r'<!--\s*Navbar.*?-->\s*<nav class="navbar">.*?</nav>', NAVBAR_HTML, content, flags=re.DOTALL)
+    content = re.sub(r'<nav class="navbar">.*?</nav>', NAVBAR_HTML, content, flags=re.DOTALL) # fallback
+
+    # Replace footer
+    content = re.sub(r'<!--\s*Footer.*?-->\s*<footer.*?>.*?</footer>', FOOTER_HTML, content, flags=re.DOTALL)
+    content = re.sub(r'<footer.*?>.*?</footer>', FOOTER_HTML, content, flags=re.DOTALL) # fallback
+
+    # Replace general links
+    replacements = {
+        'href="/"': 'href="index.html"',
+        'href="/about"': 'href="about.html"',
+        'href="/contact"': 'href="contact.html"',
+        'href="/portfolio"': 'href="portfolio.html"',
+        'href="/services/brand-creative-strategy"': 'href="brand-strategy.html"',
+        'href="/services/production-entertainment"': 'href="production-entertainment.html"',
+        'href="/services/digital-performance-marketing"': 'href="digital-marketing.html"',
+        'href="/services/integrated-brand-solutions"': 'href="integrated-brand.html"'
+    }
+    
+    for old, new in replacements.items():
+        content = content.replace(old, new)
+        
+    with open(filepath, 'w') as f:
+        f.write(content)
+
+html_files = [f for f in os.listdir('.') if f.endswith('.html')]
+for file in html_files:
+    process_file(file)
+    print(f"Processed {file}")
