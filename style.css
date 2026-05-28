@@ -659,7 +659,7 @@ ul { list-style: none; }
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: scroll-portfolio 60s linear infinite;
+  animation: scroll-portfolio 90s linear infinite;
 }
 
 .slider-track:hover {
