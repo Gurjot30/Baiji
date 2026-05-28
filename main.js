@@ -302,3 +302,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+  // --- Mobile Navigation Logic ---
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  const dropdownTrigger = document.querySelector('.dropdown-trigger');
+  
+  if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuBtn.classList.toggle('nav-active');
+      navLinks.classList.toggle('nav-active');
+      // Prevent scrolling when menu is open
+      if (navLinks.classList.contains('nav-active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+  }
+  
+  if (dropdownTrigger) {
+    dropdownTrigger.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const container = dropdownTrigger.closest('.dropdown-container');
+        container.classList.toggle('mobile-active');
+      }
+    });
+  }
