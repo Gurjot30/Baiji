@@ -330,3 +330,95 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- Video Loader GSAP Animation ---
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const videoContainer = document.getElementById('video-intro-container');
+    const video = document.getElementById('intro-video');
+    const logoTarget = document.getElementById('nav-logo-target');
+
+    if (videoContainer && video && logoTarget) {
+      // Check if the intro has already played in this session or URL indicates so
+      if (sessionStorage.getItem('introPlayed') === 'true' || window.location.search.includes('visited=true')) {
+        // Skip animation: hide video, show logo
+        videoContainer.style.display = 'none';
+        logoTarget.style.opacity = 1;
+        video.pause();
+        video.removeAttribute('src'); // Completely stop the video from playing in background
+        video.load();
+      } else {
+        // First visit: set flag and setup animation
+        sessionStorage.setItem('introPlayed', 'true');
+        
+        // Setup initial styles for animation
+        gsap.set(videoContainer, {
+          top: 0,
+          left: 0,
+          x: 0,
+          y: 0,
+          transform: "none",
+          backgroundColor: "rgba(5, 5, 5, 1)"
+        });
+
+        // The target width and height of the logo when navbar is scrolled
+        const targetWidth = 140; 
+        const targetHeight = 80;
+        
+        // We calculate the left position based on 5% padding of the navbar
+        const calculateLeft = () => window.innerWidth * 0.05;
+
+      // GSAP Timeline to animate the video shrinking into the navbar
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "+=1200", // Increased scroll distance for more gradual animation
+          scrub: 1, // Smooth scrub
+          onLeave: (self) => {
+            // Kill the trigger so it doesn't reverse when scrolling back up
+            self.kill(false); 
+            videoContainer.style.display = 'none'; // Completely hide video permanently
+          }
+        }
+      });
+
+      // Fade out background almost instantly so the hero section is visible first
+      tl.to(videoContainer, {
+        backgroundColor: "rgba(5, 5, 5, 0)", 
+        duration: 0.2, // Fades out very quickly at the start of the scroll
+        ease: "power1.out"
+      }, 0);
+
+      // "As soon as we scroll it starts shrinking" - Combine translate and shrink
+      tl.to(videoContainer, {
+        width: targetWidth,
+        height: targetHeight,
+        x: () => calculateLeft(),
+        y: 0, // Top of the screen (navbar is fixed at top: 0)
+        duration: 2,
+        ease: "power2.inOut"
+      }, 0);
+
+      // "Merge with PNG" - Crossfade video into the real image logo at the end
+      tl.to(videoContainer, {
+        opacity: 0, // Fade out the video
+        duration: 0.5,
+        ease: "power1.inOut"
+      });
+
+      tl.to(logoTarget, {
+        opacity: 1, // Fade in the image logo
+        duration: 0.5,
+        ease: "power1.inOut"
+      }, "<"); // Run at the same time as the video fade out
+
+        // On window resize, refresh ScrollTrigger calculations
+        window.addEventListener("resize", () => {
+          ScrollTrigger.refresh();
+        });
+      }
+    }
+  }
+

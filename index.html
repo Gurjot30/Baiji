@@ -8,18 +8,23 @@
   <script src="main.js" defer></script>
 </head>
 <body>
+  <!-- Video Intro Loader -->
+  <div id="video-intro-container">
+    <video id="intro-video" src="download (3).mp4" autoplay muted playsinline loop></video>
+  </div>
 
+  
     <!-- Navbar -->
     <!-- Navbar -->
   <nav class="navbar">
     <div class="container nav-container">
       <div class="logo">
-        <a href="index.html" class="logo-link">
-          <img src="assets/logo.png" alt="Baiji Entertainments Logo" class="nav-logo" />
+        <a href="index.html?visited=true" class="logo-link">
+          <img src="assets/logo.png" alt="Baiji Entertainments Logo" class="nav-logo" id="nav-logo-target" />
         </a>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html?visited=true">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li class="dropdown-container">
           <span class="dropdown-trigger">Services</span>
@@ -769,7 +774,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="footer-logo-link">
+          <a href="index.html?visited=true" class="footer-logo-link">
             <img src="assets/logo.png" alt="Baiji Entertainments Logo" class="footer-logo" />
           </a>
           <p class="footer-tagline">
@@ -804,7 +809,7 @@
         <div class="footer-col">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html?visited=true">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -832,5 +837,7 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </body>
 </html>

@@ -7363,3 +7363,39 @@ ul { list-style: none; }
     margin-top: 8px;
   }
 }
+
+/* Video Loader / Navbar Transition Styles */
+#video-intro-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1001; /* Higher than navbar (1000) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color); /* Matches the site background */
+}
+
+#intro-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0px;
+}
+
+#nav-logo-target {
+  display: block;
+  width: 140px;
+  height: 140px;
+  opacity: 0; /* Invisible target for GSAP to measure */
+  position: relative;
+  z-index: 1002;
+}
+
+.navbar.scrolled #nav-logo-target {
+  height: 80px;
+  width: 140px; /* Adjust according to logo aspect ratio */
+}
